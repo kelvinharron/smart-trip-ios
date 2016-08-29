@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		57E8EB401F97495B1C65B5F4 /* Pods_majorprojectios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */; };
+		FABDD0801D74768200048618 /* Itinerary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Itinerary.storyboard */; };
+		FABDD0871D747C9B00048618 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* Register.swift */; };
+		FABDD0891D747DE600048618 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* Login.swift */; };
+		FABDD08B1D74B10700048618 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FABDD08A1D74B10700048618 /* Readme.md */; };
 		FAE432161D7467E400CA9DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
 		FAE432181D7467E400CA9DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* ViewController.swift */; };
 		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
@@ -19,6 +23,10 @@
 		06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.release.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.release.xcconfig"; sourceTree = "<group>"; };
 		129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_majorprojectios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.debug.xcconfig"; sourceTree = "<group>"; };
+		FABDD07F1D74768200048618 /* Itinerary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Itinerary.storyboard; sourceTree = "<group>"; };
+		FABDD0861D747C9B00048618 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		FABDD0881D747DE600048618 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		FABDD08A1D74B10700048618 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Readme.md; path = Pods/Readme.md; sourceTree = "<group>"; };
 		FAE432121D7467E400CA9DB1 /* majorprojectios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majorprojectios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE432151D7467E400CA9DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE432171D7467E400CA9DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +65,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FABDD0811D7477C200048618 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
+				FABDD0861D747C9B00048618 /* Register.swift */,
+				FABDD0881D747DE600048618 /* Login.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		FABDD0821D7477CC00048618 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		FABDD0831D7477D600048618 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
 		FAE432091D7467E400CA9DB1 = {
 			isa = PBXGroup;
 			children = (
+				FABDD08A1D74B10700048618 /* Readme.md */,
 				FAE432141D7467E400CA9DB1 /* majorprojectios */,
 				FAE432131D7467E400CA9DB1 /* Products */,
 				E63ACFD7D97DFC7E14FBC2C8 /* Pods */,
@@ -78,12 +111,15 @@
 		FAE432141D7467E400CA9DB1 /* majorprojectios */ = {
 			isa = PBXGroup;
 			children = (
+				FAE4321E1D7467E400CA9DB1 /* LaunchScreen.storyboard */,
+				FABDD0831D7477D600048618 /* Realm */,
+				FABDD0821D7477CC00048618 /* Main */,
+				FABDD0811D7477C200048618 /* Login */,
 				FAE432151D7467E400CA9DB1 /* AppDelegate.swift */,
 				FAE432171D7467E400CA9DB1 /* ViewController.swift */,
-				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
 				FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */,
-				FAE4321E1D7467E400CA9DB1 /* LaunchScreen.storyboard */,
 				FAE432211D7467E400CA9DB1 /* Info.plist */,
+				FABDD07F1D74768200048618 /* Itinerary.storyboard */,
 			);
 			path = majorprojectios;
 			sourceTree = "<group>";
@@ -151,6 +187,7 @@
 			files = (
 				FAE432201D7467E400CA9DB1 /* LaunchScreen.storyboard in Resources */,
 				FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */,
+				FABDD0801D74768200048618 /* Itinerary.storyboard in Resources */,
 				FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,8 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABDD08B1D74B10700048618 /* Readme.md in Sources */,
 				FAE432181D7467E400CA9DB1 /* ViewController.swift in Sources */,
+				FABDD0871D747C9B00048618 /* Register.swift in Sources */,
 				FAE432161D7467E400CA9DB1 /* AppDelegate.swift in Sources */,
+				FABDD0891D747DE600048618 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
