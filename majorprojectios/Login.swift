@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class Login: UIViewController {
     
+    
     let loginURL = "http://localhost:54321/api/user/login"
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -32,6 +33,8 @@ class Login: UIViewController {
     }
     
     func checkRequest(){
+        moveToMainView()
+        
         let manager = Manager.sharedInstance
         manager.session.configuration.HTTPAdditionalHeaders = [
             "Content-Type":"application/x-www-form-urlencoded" ]
@@ -48,10 +51,20 @@ class Login: UIViewController {
                 switch response.result {
                 case .Success(let response):
                     print(response)
+                    
                     break
                 case .Failure(let error):
                     print(error)
                 }
         }
+    }
+    
+    func moveToMainView(){
+        
+        var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
     }
 }
