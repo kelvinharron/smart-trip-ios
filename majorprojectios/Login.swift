@@ -23,9 +23,7 @@ class Login: UIViewController {
     
     func checkLogin() {
         if (emailField.text!.isEmpty) || (passwordField.text!.isEmpty) {
-            let alert = UIAlertController(title: "Oops!", message:"Please enter a valid email and password", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true){}
+            alertMessage("Empty Fields", alertMessage: "Please fill out your email and password.")
         } else {
             checkRequest()
         }
@@ -35,14 +33,14 @@ class Login: UIViewController {
     func checkRequest(){
         moveToMainView()
         
-        let manager = Manager.sharedInstance
-        manager.session.configuration.HTTPAdditionalHeaders = [
-            "Content-Type":"application/x-www-form-urlencoded" ]
+        let alamoManager = Manager.sharedInstance
+        alamoManager.session.configuration.HTTPAdditionalHeaders = [
+            "Content-Type":"application/json" ]
         
         let parameters = ["email": emailField.text as! AnyObject,
                           "password": passwordField.text as! AnyObject ]
         
-        Alamofire.request(
+        alamoManager.request(
             .POST,
             loginURL,
             parameters: parameters,
@@ -51,7 +49,6 @@ class Login: UIViewController {
                 switch response.result {
                 case .Success(let response):
                     print(response)
-                    
                     break
                 case .Failure(let error):
                     print(error)
@@ -60,11 +57,14 @@ class Login: UIViewController {
     }
     
     func moveToMainView(){
-        
         var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
         var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
-        
         self.presentViewController(controller, animated: true, completion: nil)
-        
+    }
+    
+    func alertMessage(alertTitle: String, alertMessage: String){
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+        self.presentViewController(alert, animated: true){}
     }
 }

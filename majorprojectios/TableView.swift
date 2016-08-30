@@ -23,6 +23,8 @@ class TableView: UITableViewController {
         getDataFromServer()
     }
     
+   
+    
     func getDataFromServer(){
         Alamofire.request(
             .GET,
