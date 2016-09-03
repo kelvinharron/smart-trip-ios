@@ -9,9 +9,7 @@
 import Alamofire
 import SwiftyJSON
 
-
 class Login: UIViewController {
-    
     
     let loginURL = "http://localhost:54321/api/user/login"
     @IBOutlet weak var emailField: UITextField!
@@ -27,11 +25,9 @@ class Login: UIViewController {
         } else {
             checkRequest()
         }
-        
     }
     
     func checkRequest(){
-        moveToMainView()
         
         let alamoManager = Manager.sharedInstance
         alamoManager.session.configuration.HTTPAdditionalHeaders = [
@@ -44,14 +40,16 @@ class Login: UIViewController {
             .POST,
             loginURL,
             parameters: parameters,
-            encoding: .JSON).validate().responseJSON { [weak self] response in
+            encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
                 
-                switch response.result {
-                case .Success(let response):
-                    print(response)
+                switch serverResponse.response!.statusCode {
+                case 200:
+                    self!.successMessage("Login Success! ", alertMessage: "Welcome " + self!.emailField.text!)
                     break
-                case .Failure(let error):
-                    print(error)
+                case 400:
+                    self!.alertMessage("Invalid Email", alertMessage: "Please enter a valid email address")
+                    break
+                default: break
                 }
         }
     }
@@ -60,6 +58,14 @@ class Login: UIViewController {
         var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
         var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    func successMessage(alertTitle: String, alertMessage: String) {
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Proceed", style: .Default, handler: { action in
+            self.moveToMainView()}))
+        self.presentViewController(alert, animated: true){}
+        
     }
     
     func alertMessage(alertTitle: String, alertMessage: String){

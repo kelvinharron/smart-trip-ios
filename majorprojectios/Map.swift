@@ -8,13 +8,34 @@
 
 import MapKit
 
-class Map: UIViewController {
-
+class Map: UIViewController, CLLocationManagerDelegate {
+    
+    // link to map view object from storyboard
     @IBOutlet weak var mapView: MKMapView!
+    // start all users in belfast
     let startLocation = CLLocationCoordinate2D(latitude: 54.599181, longitude: -5.931083)
+    var locationManager:CLLocationManager?
+    let distanceSpan:Double = 500
     
     override func viewDidLoad() {
         setupMap()
+        getUserLocation()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+       getUserLocation()
+    }
+    
+    func getUserLocation() {
+        if locationManager == nil {
+            locationManager = CLLocationManager()
+            
+            locationManager!.delegate = self
+            locationManager!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+            locationManager!.requestAlwaysAuthorization()
+            locationManager!.distanceFilter = 50
+            locationManager!.startUpdatingLocation()
+        }
     }
     
     func setupMap(){
@@ -28,6 +49,6 @@ class Map: UIViewController {
         annotation.coordinate = startLocation
         annotation.title = "Belfast City Hall"
         mapView.addAnnotation(annotation)
-    
+        
     }
 }

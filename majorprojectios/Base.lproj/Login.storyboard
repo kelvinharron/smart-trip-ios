@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="grJ-Ye-Xyv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="grJ-Ye-Xyv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -59,7 +59,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cuJ-xy-NTM" kind="show" id="Hvt-Hw-G7e"/>
+                                    <segue destination="cuJ-xy-NTM" kind="push" id="Hvt-Hw-G7e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,7 +127,7 @@
                                 <rect key="frame" x="163" y="365" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="YH0-GP-CXU"/>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="YH0-GP-CXU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIk-Hq-FL9">
@@ -170,6 +170,7 @@
                             <constraint firstItem="Tfg-pA-pru" firstAttribute="leading" secondItem="k3J-Tp-r2Y" secondAttribute="leading" id="zNt-YZ-hSO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QsV-qs-G6V"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="confirmPasswordField" destination="k3J-Tp-r2Y" id="eFe-IZ-PV2"/>
@@ -238,7 +239,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cuJ-xy-NTM" kind="showDetail" animates="NO" action="showViewController:sender:" id="6w3-3n-Nrf"/>
+                                    <segue destination="cuJ-xy-NTM" kind="push" animates="NO" id="6w3-3n-Nrf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -321,6 +322,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YH0-GP-CXU"/>
-        <segue reference="6w3-3n-Nrf"/>
+        <segue reference="Hvt-Hw-G7e"/>
     </inferredMetricsTieBreakers>
 </document>

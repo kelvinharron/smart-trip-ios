@@ -19,6 +19,10 @@ class Register: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
     
+    override func viewDidLoad() {
+        definesPresentationContext = true
+    }
+    
     @IBAction func signupButton(sender: AnyObject) {
         checkLogin()
     }
@@ -47,14 +51,19 @@ class Register: UIViewController {
             .POST,
             registerURL,
             parameters: parameters,
-            encoding: .JSON).validate().responseJSON { [weak self] response in
+            encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
               
-                switch response.response!.statusCode {
+                switch serverResponse.response!.statusCode {
                 case 200:
-                    self!.alertMessage("Registered " + self!.emailField.text!, alertMessage: "Tap OK to continue.")
+                    self!.successMessage("Registered " + self!.emailField.text!, alertMessage: "Tap OK to continue.")
+                    self!.moveToMainView()
                     break
-                case 401:
+                case 400:
+                    self!.alertMessage("Bad Credentials", alertMessage: "Please enter a valid email address and a password that has at least 8 alphanumeric characters")
+                    break
+                case 409:
                     self!.alertMessage("Email already in use", alertMessage: "Please choose a new email or contact the admin.")
+                    break
                 default: break
                 }
         }
@@ -64,5 +73,19 @@ class Register: UIViewController {
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
         self.presentViewController(alert, animated: true){}
+    }
+    
+    func successMessage(alertTitle: String, alertMessage: String) {
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Proceed", style: .Default, handler: { action in
+            self.moveToMainView()}))
+        self.presentViewController(alert, animated: true){}
+        
+    }
+    
+    func moveToMainView(){
+        var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
     }
 }
