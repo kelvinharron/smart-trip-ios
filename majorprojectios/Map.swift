@@ -10,6 +10,12 @@ import MapKit
 
 class Map: UIViewController, CLLocationManagerDelegate {
     
+    let getEvents = "http://localhost:54321/api/event/search"
+    
+    @IBAction func scanButton(sender: AnyObject) {
+        
+    }
+    
     // link to map view object from storyboard
     @IBOutlet weak var mapView: MKMapView!
     // start all users in belfast
@@ -49,6 +55,10 @@ class Map: UIViewController, CLLocationManagerDelegate {
         annotation.coordinate = startLocation
         annotation.title = "Belfast City Hall"
         mapView.addAnnotation(annotation)
+        
+    }
+    
+    func requestEvents(){
         
     }
 }

@@ -13,7 +13,7 @@ import SwiftyJSON
 
 class Register: UIViewController {
     
-    let registerURL = "http://localhost:54321/api/user/register"
+    let registerURL = "http://localhost:54321/api/user/signup"
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -29,46 +29,48 @@ class Register: UIViewController {
     
     func checkLogin() {
         if (emailField.text!.isEmpty) || (passwordField.text!.isEmpty) || (confirmPasswordField.text!.isEmpty) {
-            alertMessage("Error: Empty text fields", alertMessage: "Please fill out all text fields when registering.")
+            alertMessage("Empty text fields", alertMessage: "Please fill out all text fields when registering.")
         } else if (passwordField.text != confirmPasswordField.text) {
-            alertMessage("Error: Passwords do not match", alertMessage: "Please ensure your passwords match.")
+            alertMessage("Passwords do not match", alertMessage: "Please ensure your passwords match.")
         } else {
             checkRequest()
         }
     }
     
     func checkRequest() {
+        
+        let parameters = ["email": emailField.text as! AnyObject,
+                          "password": passwordField.text as! AnyObject
+        ]
         let manager = Manager.sharedInstance
         manager.session.configuration.HTTPAdditionalHeaders = [
             "Content-Type":"application/json"
         ]
-        let parameters = ["email": emailField.text as! AnyObject,
-                          "password": passwordField.text as! AnyObject
-        ]
-        print(parameters)
         
-        Alamofire.request(
-            .POST,
-            registerURL,
-            parameters: parameters,
-            encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
-              
-                switch serverResponse.response!.statusCode {
-                case 200:
-                    self!.successMessage("Registered " + self!.emailField.text!, alertMessage: "Tap OK to continue.")
-                    self!.moveToMainView()
-                    break
-                case 400:
-                    self!.alertMessage("Bad Credentials", alertMessage: "Please enter a valid email address and a password that has at least 8 alphanumeric characters")
-                    break
-                case 409:
-                    self!.alertMessage("Email already in use", alertMessage: "Please choose a new email or contact the admin.")
-                    break
-                default: break
-                }
+        Alamofire.request(.POST,registerURL,parameters: parameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
+            
+            let data = serverResponse.data
+            let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
+            
+            print(responseData)
+            
+            switch serverResponse.response!.statusCode {
+            case 200:
+                self!.successMessage("Welcome!", alertMessage: responseData!)
+                break
+            case 400:
+                self!.alertMessage("Bad Credentials", alertMessage: responseData!)
+                break
+            case 409:
+                self!.alertMessage("Error", alertMessage: responseData!)
+                break
+            default: break
+            }
         }
     }
-    
+    /// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.
+    /// - Parameter alertTitle: String used as title of the alert popup
+    /// - Parameter alertMessage: String used as body of the alert popup
     func alertMessage(alertTitle: String, alertMessage: String){
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
@@ -82,8 +84,12 @@ class Register: UIViewController {
         self.presentViewController(alert, animated: true){}
         
     }
-    
+    /**
+     
+     holy ceaip
+     */
     func moveToMainView(){
+        /// Gets or sets
         var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
         var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
         self.presentViewController(controller, animated: true, completion: nil)

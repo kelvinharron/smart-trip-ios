@@ -47,7 +47,7 @@ class Login: UIViewController {
                     self!.successMessage("Login Success! ", alertMessage: "Welcome " + self!.emailField.text!)
                     break
                 case 400:
-                    self!.alertMessage("Invalid Email", alertMessage: "Please enter a valid email address")
+                    self!.alertMessage("Invalid Details", alertMessage: "Please enter a valid email and password")
                     break
                 default: break
                 }
