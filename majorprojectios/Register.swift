@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 /// Register class defines the logic of the registration view controller.
 class Register: UIViewController {
@@ -68,6 +69,7 @@ class Register: UIViewController {
             switch serverResponse.response!.statusCode {
             case 200:
                 self!.successMessage("Welcome!", alertMessage: responseData!)
+                self!.saveOffline()
                 break
             case 400:
                 self!.alertMessage("Bad Credentials", alertMessage: responseData!)
@@ -106,5 +108,20 @@ class Register: UIViewController {
         var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
         var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    func saveOffline(){
+        let offlineUser = User()
+        offlineUser.email = self.emailField.text!
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(offlineUser)
+                print(offlineUser)
+            }
+        } catch {
+            print(error)
+        }
+        
     }
 }

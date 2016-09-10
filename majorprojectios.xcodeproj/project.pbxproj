@@ -11,6 +11,7 @@
 		FA1098771D7507D600EFE9B6 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1098761D7507D600EFE9B6 /* Itinerary.swift */; };
 		FA10987B1D75122900EFE9B6 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987A1D75122900EFE9B6 /* Map.swift */; };
 		FA10987D1D7524C400EFE9B6 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987C1D7524C400EFE9B6 /* TableView.swift */; };
+		FA9E924B1D838AD700B769E8 /* OfflineLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */; };
 		FABDD0801D74768200048618 /* Itinerary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Itinerary.storyboard */; };
 		FABDD0871D747C9B00048618 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* Register.swift */; };
 		FABDD0891D747DE600048618 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* Login.swift */; };
@@ -28,6 +29,7 @@
 		FA1098761D7507D600EFE9B6 /* Itinerary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 		FA10987A1D75122900EFE9B6 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		FA10987C1D7524C400EFE9B6 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineLogin.swift; sourceTree = "<group>"; };
 		FABDD07F1D74768200048618 /* Itinerary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Itinerary.storyboard; sourceTree = "<group>"; };
 		FABDD0861D747C9B00048618 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FABDD0881D747DE600048618 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
 				FABDD0861D747C9B00048618 /* Register.swift */,
 				FABDD0881D747DE600048618 /* Login.swift */,
+				FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				FA10987D1D7524C400EFE9B6 /* TableView.swift in Sources */,
 				FAE432161D7467E400CA9DB1 /* AppDelegate.swift in Sources */,
 				FABDD0891D747DE600048618 /* Login.swift in Sources */,
+				FA9E924B1D838AD700B769E8 /* OfflineLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
