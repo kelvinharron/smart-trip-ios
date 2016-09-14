@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		57E8EB401F97495B1C65B5F4 /* Pods_majorprojectios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */; };
-		FA1098771D7507D600EFE9B6 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1098761D7507D600EFE9B6 /* Itinerary.swift */; };
-		FA10987B1D75122900EFE9B6 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987A1D75122900EFE9B6 /* Map.swift */; };
-		FA10987D1D7524C400EFE9B6 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987C1D7524C400EFE9B6 /* TableView.swift */; };
-		FA9E924B1D838AD700B769E8 /* OfflineLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */; };
-		FABDD0801D74768200048618 /* Itinerary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Itinerary.storyboard */; };
-		FABDD0871D747C9B00048618 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* Register.swift */; };
-		FABDD0891D747DE600048618 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* Login.swift */; };
+		FA0C43941D88EA4600B36706 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* Welcome.swift */; };
+		FA0C43961D88EA4600B36706 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987C1D7524C400EFE9B6 /* TripView.swift */; };
+		FA0C43971D88EA4600B36706 /* AddNewTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA725D831D88DA460025BD3E /* AddNewTrip.swift */; };
+		FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */; };
+		FA0C43991D88EA4600B36706 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987A1D75122900EFE9B6 /* Map.swift */; };
+		FA0C439A1D88EA4600B36706 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* Register.swift */; };
+		FA0C439B1D88EA4600B36706 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* Login.swift */; };
+		FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
+		FABDD0801D74768200048618 /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Trip.storyboard */; };
 		FABDD08B1D74B10700048618 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FABDD08A1D74B10700048618 /* Readme.md */; };
-		FAE432161D7467E400CA9DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
-		FAE432181D7467E400CA9DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* ViewController.swift */; };
 		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
 		FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -26,17 +26,17 @@
 		06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.release.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.release.xcconfig"; sourceTree = "<group>"; };
 		129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_majorprojectios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.debug.xcconfig"; sourceTree = "<group>"; };
-		FA1098761D7507D600EFE9B6 /* Itinerary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 		FA10987A1D75122900EFE9B6 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		FA10987C1D7524C400EFE9B6 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		FA10987C1D7524C400EFE9B6 /* TripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		FA725D831D88DA460025BD3E /* AddNewTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTrip.swift; sourceTree = "<group>"; };
 		FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineLogin.swift; sourceTree = "<group>"; };
-		FABDD07F1D74768200048618 /* Itinerary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Itinerary.storyboard; sourceTree = "<group>"; };
+		FABDD07F1D74768200048618 /* Trip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
 		FABDD0861D747C9B00048618 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FABDD0881D747DE600048618 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		FABDD08A1D74B10700048618 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Readme.md; path = Pods/Readme.md; sourceTree = "<group>"; };
 		FAE432121D7467E400CA9DB1 /* majorprojectios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majorprojectios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE432151D7467E400CA9DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAE432171D7467E400CA9DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAE432171D7467E400CA9DB1 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		FAE4321A1D7467E400CA9DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE432211D7467E400CA9DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,13 +71,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA725D821D88DA150025BD3E /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				FABDD07F1D74768200048618 /* Trip.storyboard */,
+				FA10987C1D7524C400EFE9B6 /* TripView.swift */,
+				FA725D831D88DA460025BD3E /* AddNewTrip.swift */,
+			);
+			name = Trips;
+			sourceTree = "<group>";
+		};
 		FABDD0811D7477C200048618 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
 				FABDD0861D747C9B00048618 /* Register.swift */,
 				FABDD0881D747DE600048618 /* Login.swift */,
-				FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -85,10 +94,7 @@
 		FABDD0821D7477CC00048618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FABDD07F1D74768200048618 /* Itinerary.storyboard */,
-				FA1098761D7507D600EFE9B6 /* Itinerary.swift */,
 				FA10987A1D75122900EFE9B6 /* Map.swift */,
-				FA10987C1D7524C400EFE9B6 /* TableView.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -96,6 +102,7 @@
 		FABDD0831D7477D600048618 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */,
 			);
 			name = Realm;
 			sourceTree = "<group>";
@@ -122,7 +129,8 @@
 		FAE432141D7467E400CA9DB1 /* majorprojectios */ = {
 			isa = PBXGroup;
 			children = (
-				FAE432171D7467E400CA9DB1 /* ViewController.swift */,
+				FAE432171D7467E400CA9DB1 /* Welcome.swift */,
+				FA725D821D88DA150025BD3E /* Trips */,
 				FABDD0831D7477D600048618 /* Realm */,
 				FABDD0821D7477CC00048618 /* Main */,
 				FABDD0811D7477C200048618 /* Login */,
@@ -168,6 +176,7 @@
 				TargetAttributes = {
 					FAE432111D7467E400CA9DB1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = PD5QMARB3X;
 					};
 				};
 			};
@@ -195,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */,
-				FABDD0801D74768200048618 /* Itinerary.storyboard in Resources */,
+				FABDD0801D74768200048618 /* Trip.storyboard in Resources */,
 				FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,15 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0C43941D88EA4600B36706 /* Welcome.swift in Sources */,
+				FA0C43961D88EA4600B36706 /* TripView.swift in Sources */,
+				FA0C43971D88EA4600B36706 /* AddNewTrip.swift in Sources */,
+				FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */,
+				FA0C43991D88EA4600B36706 /* Map.swift in Sources */,
+				FA0C439A1D88EA4600B36706 /* Register.swift in Sources */,
+				FA0C439B1D88EA4600B36706 /* Login.swift in Sources */,
+				FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */,
 				FABDD08B1D74B10700048618 /* Readme.md in Sources */,
-				FA1098771D7507D600EFE9B6 /* Itinerary.swift in Sources */,
-				FAE432181D7467E400CA9DB1 /* ViewController.swift in Sources */,
-				FA10987B1D75122900EFE9B6 /* Map.swift in Sources */,
-				FABDD0871D747C9B00048618 /* Register.swift in Sources */,
-				FA10987D1D7524C400EFE9B6 /* TableView.swift in Sources */,
-				FAE432161D7467E400CA9DB1 /* AppDelegate.swift in Sources */,
-				FABDD0891D747DE600048618 /* Login.swift in Sources */,
-				FA9E924B1D838AD700B769E8 /* OfflineLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +378,14 @@
 			baseConfigurationReference = C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = majorprojectios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinhharron.majorprojectios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -381,10 +394,14 @@
 			baseConfigurationReference = 06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = majorprojectios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinhharron.majorprojectios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

@@ -4,7 +4,7 @@ import Alamofire
 /// Start point of our application. First view from the storyboard we see is the welcome screen which the following code handles
 ///
 ///
-class ViewController: UIViewController {
+class Welcome: UIViewController {
     
     
     /// Label from view controller that is used to display server status

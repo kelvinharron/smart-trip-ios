@@ -1,5 +1,6 @@
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 /// Login class defines the logic of the login view controller
 class Login: UIViewController {
@@ -50,6 +51,7 @@ class Login: UIViewController {
             
             // Before attempting to parse result, check if server is offline
             if (serverResponse.result.error!.code == self!.offlineErrorCode) {
+                
                 self!.alertMessage("Connection Error", alertMessage: "We can't reach the service at the moment. Please contact the admin.")
                 return
             }
@@ -95,8 +97,19 @@ class Login: UIViewController {
     
     /// Once called, moves to a new storyboard identified as 'InitialController' in the main storyboard after login
     func moveToMainView(){
-        var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
+        var storyboard = UIStoryboard(name: "Trip", bundle: nil)
         var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    func checkOfflineUser(){
+        let realm = try! Realm()
+        let offlineUser = realm.objects(User)
+        
+       /// if (offlineUser.email == emailField.text!) {
+       ///     print(login) success
+       ///  }
+        
+        
     }
 }

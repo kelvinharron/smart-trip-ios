@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="grJ-Ye-Xyv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="grJ-Ye-Xyv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,7 +9,7 @@
         <!--welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="welcome" id="BYZ-38-t0r" customClass="ViewController" customModule="majorprojectios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome" title="welcome" id="BYZ-38-t0r" customClass="Welcome" customModule="majorprojectios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -196,7 +196,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoP-Rm-9QO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MoP-Rm-9QO">
                                 <rect key="frame" x="20" y="113" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8vS-1A-gj6"/>
@@ -277,30 +277,10 @@
             </objects>
             <point key="canvasLocation" x="1808.5" y="0.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="eJE-gg-uHZ">
-            <objects>
-                <viewController id="Q2Z-yu-gAq" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Fjy-lf-JDF"/>
-                        <viewControllerLayoutGuide type="bottom" id="VJ6-8S-lqO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Qhy-E9-MDC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cm-Bp-hr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2378.5" y="0.5"/>
-        </scene>
         <!--start-->
         <scene sceneID="1r7-6f-Pvc">
             <objects>
-                <navigationController title="start" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="grJ-Ye-Xyv" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="start" title="start" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="grJ-Ye-Xyv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -323,7 +303,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YH0-GP-CXU"/>
-        <segue reference="Hvt-Hw-G7e"/>
+        <segue reference="IN5-0h-6hg"/>
+        <segue reference="6w3-3n-Nrf"/>
     </inferredMetricsTieBreakers>
 </document>

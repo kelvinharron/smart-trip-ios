@@ -56,7 +56,7 @@ class Register: UIViewController {
         alamoManager.request(.POST,signupURL,parameters: parameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
             
             // Before attempting to parse result, check if server is offline
-            if serverResponse.result.error!.code == self!.offlineErrorCode {
+            if (serverResponse.result.error!.code == self!.offlineErrorCode) {
                 self!.alertMessage("Connection Error", alertMessage: "We can't reach the service at the moment. Please contact the admin.")
                 return
             }
@@ -105,8 +105,8 @@ class Register: UIViewController {
     
     /// Once called, moves to a new storyboard identified as 'InitialController' in the main storyboard after login
     func moveToMainView(){
-        var storyboard = UIStoryboard(name: "Itinerary", bundle: nil)
-        var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
+        let storyboard = UIStoryboard(name: "Trip", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
@@ -117,7 +117,7 @@ class Register: UIViewController {
             let realm = try Realm()
             try realm.write {
                 realm.add(offlineUser)
-                print(offlineUser)
+                print("Saved " + offlineUser.email + " for offline login")
             }
         } catch {
             print(error)
