@@ -1,14 +1,6 @@
-//
-//  Map.swift
-//  majorprojectios
-//
-//  Created by Kelvin Harron on 30/08/2016.
-//  Copyright © 2016 Kelvin Harron. All rights reserved.
-//
-
 import MapKit
 
-class Map: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let getEvents = "http://localhost:54321/api/event/search"
     

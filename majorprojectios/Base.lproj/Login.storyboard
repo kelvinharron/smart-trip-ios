@@ -9,7 +9,7 @@
         <!--welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="welcome" title="welcome" id="BYZ-38-t0r" customClass="Welcome" customModule="majorprojectios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome" title="welcome" id="BYZ-38-t0r" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -94,7 +94,7 @@
         <!--signup-->
         <scene sceneID="b8J-YU-GKI">
             <objects>
-                <viewController title="signup" id="cuJ-xy-NTM" customClass="Register" customModule="majorprojectios" sceneMemberID="viewController">
+                <viewController title="signup" id="cuJ-xy-NTM" customClass="RegisterViewController" customModule="majorprojectios" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5MK-X9-GLf"/>
                         <viewControllerLayoutGuide type="bottom" id="5qJ-GH-dHN"/>
@@ -187,7 +187,7 @@
         <!--login-->
         <scene sceneID="jmY-Gs-cBo">
             <objects>
-                <viewController title="login" id="Ho8-Jv-P4T" customClass="Login" customModule="majorprojectios" sceneMemberID="viewController">
+                <viewController title="login" id="Ho8-Jv-P4T" customClass="LoginViewController" customModule="majorprojectios" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GA2-T5-2l4"/>
                         <viewControllerLayoutGuide type="bottom" id="ggI-R6-KfX"/>
@@ -303,7 +303,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IN5-0h-6hg"/>
+        <segue reference="YH0-GP-CXU"/>
         <segue reference="6w3-3n-Nrf"/>
     </inferredMetricsTieBreakers>
 </document>

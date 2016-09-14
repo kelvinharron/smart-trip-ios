@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		57E8EB401F97495B1C65B5F4 /* Pods_majorprojectios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */; };
-		FA0C43941D88EA4600B36706 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* Welcome.swift */; };
-		FA0C43961D88EA4600B36706 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987C1D7524C400EFE9B6 /* TripView.swift */; };
-		FA0C43971D88EA4600B36706 /* AddNewTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA725D831D88DA460025BD3E /* AddNewTrip.swift */; };
+		FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */; };
+		FA0C43961D88EA4600B36706 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987C1D7524C400EFE9B6 /* TripViewController.swift */; };
+		FA0C43971D88EA4600B36706 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA725D831D88DA460025BD3E /* AddTripViewController.swift */; };
 		FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */; };
-		FA0C43991D88EA4600B36706 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987A1D75122900EFE9B6 /* Map.swift */; };
-		FA0C439A1D88EA4600B36706 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* Register.swift */; };
-		FA0C439B1D88EA4600B36706 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* Login.swift */; };
+		FA0C43991D88EA4600B36706 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987A1D75122900EFE9B6 /* MapViewController.swift */; };
+		FA0C439A1D88EA4600B36706 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* RegisterViewController.swift */; };
+		FA0C439B1D88EA4600B36706 /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* LoginVIewController.swift */; };
 		FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
-		FA0C439E1D89A9DE00B36706 /* DetailTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C439D1D89A9DE00B36706 /* DetailTripView.swift */; };
+		FA0C439E1D89A9DE00B36706 /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */; };
 		FABDD0801D74768200048618 /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Trip.storyboard */; };
 		FABDD08B1D74B10700048618 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FABDD08A1D74B10700048618 /* Readme.md */; };
 		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
@@ -27,18 +27,18 @@
 		06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.release.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.release.xcconfig"; sourceTree = "<group>"; };
 		129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_majorprojectios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.debug.xcconfig"; sourceTree = "<group>"; };
-		FA0C439D1D89A9DE00B36706 /* DetailTripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTripView.swift; sourceTree = "<group>"; };
-		FA10987A1D75122900EFE9B6 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		FA10987C1D7524C400EFE9B6 /* TripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
-		FA725D831D88DA460025BD3E /* AddNewTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTrip.swift; sourceTree = "<group>"; };
+		FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTripViewController.swift; sourceTree = "<group>"; };
+		FA10987A1D75122900EFE9B6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FA10987C1D7524C400EFE9B6 /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		FA725D831D88DA460025BD3E /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineLogin.swift; sourceTree = "<group>"; };
 		FABDD07F1D74768200048618 /* Trip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
-		FABDD0861D747C9B00048618 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
-		FABDD0881D747DE600048618 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		FABDD0861D747C9B00048618 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FABDD0881D747DE600048618 /* LoginVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
 		FABDD08A1D74B10700048618 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Readme.md; path = Pods/Readme.md; sourceTree = "<group>"; };
 		FAE432121D7467E400CA9DB1 /* majorprojectios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majorprojectios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE432151D7467E400CA9DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAE432171D7467E400CA9DB1 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FAE4321A1D7467E400CA9DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE432211D7467E400CA9DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,9 +77,9 @@
 			isa = PBXGroup;
 			children = (
 				FABDD07F1D74768200048618 /* Trip.storyboard */,
-				FA10987C1D7524C400EFE9B6 /* TripView.swift */,
-				FA0C439D1D89A9DE00B36706 /* DetailTripView.swift */,
-				FA725D831D88DA460025BD3E /* AddNewTrip.swift */,
+				FA10987C1D7524C400EFE9B6 /* TripViewController.swift */,
+				FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */,
+				FA725D831D88DA460025BD3E /* AddTripViewController.swift */,
 			);
 			name = Trips;
 			sourceTree = "<group>";
@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
-				FABDD0861D747C9B00048618 /* Register.swift */,
-				FABDD0881D747DE600048618 /* Login.swift */,
+				FABDD0861D747C9B00048618 /* RegisterViewController.swift */,
+				FABDD0881D747DE600048618 /* LoginVIewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 		FABDD0821D7477CC00048618 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FA10987A1D75122900EFE9B6 /* Map.swift */,
+				FA10987A1D75122900EFE9B6 /* MapViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 		FAE432141D7467E400CA9DB1 /* majorprojectios */ = {
 			isa = PBXGroup;
 			children = (
-				FAE432171D7467E400CA9DB1 /* Welcome.swift */,
+				FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */,
 				FA725D821D88DA150025BD3E /* Trips */,
 				FABDD0831D7477D600048618 /* Realm */,
 				FABDD0821D7477CC00048618 /* Main */,
@@ -267,14 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0C43941D88EA4600B36706 /* Welcome.swift in Sources */,
-				FA0C43961D88EA4600B36706 /* TripView.swift in Sources */,
-				FA0C439E1D89A9DE00B36706 /* DetailTripView.swift in Sources */,
-				FA0C43971D88EA4600B36706 /* AddNewTrip.swift in Sources */,
+				FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */,
+				FA0C43961D88EA4600B36706 /* TripViewController.swift in Sources */,
+				FA0C439E1D89A9DE00B36706 /* DetailTripViewController.swift in Sources */,
+				FA0C43971D88EA4600B36706 /* AddTripViewController.swift in Sources */,
 				FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */,
-				FA0C43991D88EA4600B36706 /* Map.swift in Sources */,
-				FA0C439A1D88EA4600B36706 /* Register.swift in Sources */,
-				FA0C439B1D88EA4600B36706 /* Login.swift in Sources */,
+				FA0C43991D88EA4600B36706 /* MapViewController.swift in Sources */,
+				FA0C439A1D88EA4600B36706 /* RegisterViewController.swift in Sources */,
+				FA0C439B1D88EA4600B36706 /* LoginVIewController.swift in Sources */,
 				FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */,
 				FABDD08B1D74B10700048618 /* Readme.md in Sources */,
 			);

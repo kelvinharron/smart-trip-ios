@@ -8,7 +8,7 @@
         <!--TripView-->
         <scene sceneID="gI5-KH-9Lj">
             <objects>
-                <tableViewController storyboardIdentifier="TripView" title="TripView" id="bwE-Q9-cvQ" customClass="TripView" customModule="majorprojectios" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TripView" title="TripView" id="bwE-Q9-cvQ" customClass="TripViewController" customModule="majorprojectios" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HP4-G1-GIR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--detail-->
         <scene sceneID="T4k-7J-Hda">
             <objects>
-                <viewController title="detail" id="yQu-tO-4zq" customClass="DetailTripView" customModule="majorprojectios" sceneMemberID="viewController">
+                <viewController title="detail" id="yQu-tO-4zq" customClass="DetailTripViewController" customModule="majorprojectios" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyO-8f-IR6"/>
                         <viewControllerLayoutGuide type="bottom" id="OVs-xr-XjO"/>
@@ -95,7 +95,7 @@
         <!--AddNewTrip-->
         <scene sceneID="9xB-ea-wBp">
             <objects>
-                <viewController title="AddNewTrip" id="Oea-QT-gtx" customClass="AddNewTrip" customModule="majorprojectios" sceneMemberID="viewController">
+                <viewController title="AddNewTrip" id="Oea-QT-gtx" customClass="AddTripViewController" customModule="majorprojectios" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SdE-Eo-eBf"/>
                         <viewControllerLayoutGuide type="bottom" id="WE3-vt-rqY"/>
@@ -225,6 +225,7 @@
         <!--Navigation Controller-->
         <scene sceneID="o8J-i8-5pN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPo-3n-MUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nar-Xb-dbJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -238,13 +239,13 @@
                         <segue destination="Oea-QT-gtx" kind="relationship" relationship="rootViewController" id="t52-VN-83b"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xPo-3n-MUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4195.5" y="-1014.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f2r-ou-yHQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCT-aY-2Bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hho-52-8oq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -258,12 +259,11 @@
                         <segue destination="yQu-tO-4zq" kind="relationship" relationship="rootViewController" id="iHj-Fu-wwz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QCT-aY-2Bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4114.5" y="-131.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fEL-gd-3bs"/>
+        <segue reference="Dsa-fl-w1B"/>
     </inferredMetricsTieBreakers>
 </document>

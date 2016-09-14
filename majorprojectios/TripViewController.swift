@@ -2,12 +2,13 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class TripView: UITableViewController {
+class TripViewController: UITableViewController {
     
     @IBOutlet var tripTable: UITableView!
-   
-    var valueToPass:String!
+    
+    
     var tripArray = [String]()
+    var valueToPass = ""
     let getTripsURL = "http://localhost:54321/api/trip/"
     
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class TripView: UITableViewController {
     }
     
     func getTripList(){
-         var numberRows = 0
+        var numberRows = 0
         Alamofire.request(.GET, getTripsURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
             
             switch serverResponse.result {
@@ -29,9 +30,8 @@ class TripView: UITableViewController {
                 
                 for i in 0...numberRows {
                     var trip = jsonResult[i]["tripName"].stringValue as String!
-                    print(trip)
                     self.tripArray.append(trip)
-
+                    
                 }
                 self.tripTable.reloadData()
                 break
@@ -54,13 +54,22 @@ class TripView: UITableViewController {
         return cell
     }
     
+ 
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if (segue.identifier == "segueTest") {
-            var detailController = segue.destinationViewController as! UIViewController
-            detailController.toPass = "Test PASS"
+            
+            let nav = segue.destinationViewController as! UINavigationController
+            let destinationViewController = nav.topViewController as! DetailTripViewController
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let selectedRow = tripArray[indexPath.row]
+                destinationViewController.valueToPass = selectedRow
+            }
         }
     }
-   
+    
     
     
     /// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.
