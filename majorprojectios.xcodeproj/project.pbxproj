@@ -16,6 +16,7 @@
 		FA0C439A1D88EA4600B36706 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* Register.swift */; };
 		FA0C439B1D88EA4600B36706 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* Login.swift */; };
 		FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
+		FA0C439E1D89A9DE00B36706 /* DetailTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C439D1D89A9DE00B36706 /* DetailTripView.swift */; };
 		FABDD0801D74768200048618 /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Trip.storyboard */; };
 		FABDD08B1D74B10700048618 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FABDD08A1D74B10700048618 /* Readme.md */; };
 		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
@@ -26,6 +27,7 @@
 		06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.release.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.release.xcconfig"; sourceTree = "<group>"; };
 		129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_majorprojectios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0C439D1D89A9DE00B36706 /* DetailTripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTripView.swift; sourceTree = "<group>"; };
 		FA10987A1D75122900EFE9B6 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		FA10987C1D7524C400EFE9B6 /* TripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		FA725D831D88DA460025BD3E /* AddNewTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewTrip.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				FABDD07F1D74768200048618 /* Trip.storyboard */,
 				FA10987C1D7524C400EFE9B6 /* TripView.swift */,
+				FA0C439D1D89A9DE00B36706 /* DetailTripView.swift */,
 				FA725D831D88DA460025BD3E /* AddNewTrip.swift */,
 			);
 			name = Trips;
@@ -266,6 +269,7 @@
 			files = (
 				FA0C43941D88EA4600B36706 /* Welcome.swift in Sources */,
 				FA0C43961D88EA4600B36706 /* TripView.swift in Sources */,
+				FA0C439E1D89A9DE00B36706 /* DetailTripView.swift in Sources */,
 				FA0C43971D88EA4600B36706 /* AddNewTrip.swift in Sources */,
 				FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */,
 				FA0C43991D88EA4600B36706 /* Map.swift in Sources */,
