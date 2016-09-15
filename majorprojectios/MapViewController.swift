@@ -4,6 +4,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let getEvents = "http://localhost:54321/api/event/search"
     
+    
     @IBAction func scanButton(sender: AnyObject) {
         
     }
@@ -16,7 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let distanceSpan:Double = 500
     
     override func viewDidLoad() {
-        setupMap()
+       // setupMap()
         getUserLocation()
     }
     
@@ -35,7 +36,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             locationManager!.startUpdatingLocation()
         }
     }
-    
+    /**
     func setupMap(){
         
         let span = MKCoordinateSpanMake(0.05, 0.05)
@@ -49,7 +50,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.addAnnotation(annotation)
         
     }
-    
+    */
     func requestEvents(){
         
     }

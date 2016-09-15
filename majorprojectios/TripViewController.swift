@@ -3,24 +3,21 @@ import Alamofire
 import SwiftyJSON
 
 class TripViewController: UITableViewController {
-    
     @IBOutlet var tripTable: UITableView!
-    
     
     var tripArray = [String]()
     var valueToPass = ""
+    
     let getTripsURL = "http://localhost:54321/api/trip/"
+    
+    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         getTripList()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        tripTable.reloadData()
-    }
-    
     func getTripList(){
-        var numberRows = 0
+        var numberRows = 1
         Alamofire.request(.GET, getTripsURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
             
             switch serverResponse.result {
@@ -30,8 +27,8 @@ class TripViewController: UITableViewController {
                 
                 for i in 0...numberRows {
                     var trip = jsonResult[i]["tripName"].stringValue as String!
+                    print(trip)
                     self.tripArray.append(trip)
-                    
                 }
                 self.tripTable.reloadData()
                 break
@@ -49,16 +46,13 @@ class TripViewController: UITableViewController {
     
     /// Returns an index path so we can configure a cell for display
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tripTable.dequeueReusableCellWithIdentifier("Cell")!
+        let cell = tripTable.dequeueReusableCellWithIdentifier("tripCell")!
         cell.textLabel?.text = tripArray[indexPath.row]
         return cell
     }
     
- 
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if (segue.identifier == "segueTest") {
+        if (segue.identifier == "segueSender") {
             
             let nav = segue.destinationViewController as! UINavigationController
             let destinationViewController = nav.topViewController as! DetailTripViewController
@@ -69,8 +63,6 @@ class TripViewController: UITableViewController {
             }
         }
     }
-    
-    
     
     /// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.
     ///
@@ -89,7 +81,7 @@ class TripViewController: UITableViewController {
     /// Once called, moves to the welcome view
     func moveToLogout(){
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("welcome") as UIViewController
+        let controller = storyboard.instantiateViewControllerWithIdentifier("WelcomeViewController") as UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
     }
 }
