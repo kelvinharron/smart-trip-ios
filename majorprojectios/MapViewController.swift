@@ -15,12 +15,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     let locationManager = CLLocationManager()
     var searchText = ""
     var venueArray = [String]()
+    var annotationArray: [MKPointAnnotation] = []
     
     override func viewDidLoad() {
         establishLocationManager()
         self.searchBar.delegate = self
-        var lat = locationManager.location?.coordinate.latitude
-        var lng = locationManager.location?.coordinate.longitude
+        let lat = locationManager.location?.coordinate.latitude
+        let lng = locationManager.location?.coordinate.longitude
         let center = CLLocationCoordinate2D(latitude: lat!, longitude: lng!)
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: center, span: span)
@@ -40,7 +41,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     /// MARK: Location delegate methods
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -48,14 +48,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        
+        let annotationsToRemove = mapView.annotations.filter { $0 !== mapView.userLocation }
+        mapView.removeAnnotations(annotationsToRemove)
+        annotationArray.removeAll()
         searchText = searchBar.text!
         searchVenues()
         searchBar.endEditing(true)
     }
     
     func searchVenues() {
-        var numberVenues = 0
+        
         let latitude:String = "\(locationManager.location!.coordinate.latitude)"
         let longitude:String = "\(locationManager.location!.coordinate.longitude)"
         
@@ -74,40 +76,32 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             /// SwiftyJSON used to easily parse JSON response, code sent by response includes message that is passed to message functions for display
             let data = serverResponse.data
-            let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
-            
-            /// Switch on the HTTP code response from the service
-            switch serverResponse.response!.statusCode {
-            case 200:
-                let jsonResult = JSON(serverResponse.result.value!)
-                numberVenues = jsonResult.count // server returns max of 10 each time
-            
-                for (index, object) in jsonResult {
-    
-                    let venueName = object["name"].stringValue
-                    let venueAddress = object["formatted_address"].stringValue
-                    var venueLati = object["lat"].double
-                    var venueLngi = object["lng"].double
-                    let venueLat = object["lat"].stringValue
-                    let venueLng = object["lng"].stringValue
-                    self!.venueArray.append(venueName)
-                    self!.venueArray.append(venueAddress)
-                    self!.venueArray.append(venueLat)
-                    self!.venueArray.append(venueLng)
-                    let annotation = MKPointAnnotation()
-                    var points:CLLocationCoordinate2D = CLLocationCoordinate2DMake(venueLati!, venueLngi!);
-                    annotation.coordinate = points
-                    annotation.title = venueName
-                    annotation.subtitle = venueAddress
-                     self!.mapView.addAnnotation(annotation)
-                }
-                break
-            case 400:
-                self!.alertMessage("Invalid details", alertMessage: responseData!)
-                break
-            default: break
+             let jsonResult = JSON(serverResponse.result.value!)
+            if serverResponse.response!.statusCode != 200 {
+                self!.alertMessage("Error", alertMessage: "Unable to reach server. Please try agai")
             }
+            for (index, object) in jsonResult {
+                let venueName = object["name"].stringValue
+                let venueAddress = object["formatted_address"].stringValue
+                var venueLati = object["lat"].double
+                var venueLngi = object["lng"].double
+                let venueLat = object["lat"].stringValue
+                let venueLng = object["lng"].stringValue
+                self!.venueArray.append(venueName)
+                self!.venueArray.append(venueAddress)
+                self!.venueArray.append(venueLat)
+                self!.venueArray.append(venueLng)
+                
+                let annotation = MKPointAnnotation()
+                var points:CLLocationCoordinate2D = CLLocationCoordinate2DMake(venueLati!, venueLngi!);
+                annotation.title = object["name"].stringValue
+                annotation.subtitle = object["formatted_address"].stringValue
+                annotation.coordinate = points
+                self!.annotationArray.append(annotation)
+            }
+            self!.mapView.addAnnotations(self!.annotationArray)
         }
+        
     }
     
     
