@@ -48,6 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchText = searchBar.text!
+        print(searchText)
         searchVenues()
     }
     
@@ -79,28 +80,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             case 200:
                 let jsonResult = JSON(serverResponse.result.value!)
                 numberVenues = jsonResult.count // server returns max of 10 each time
-                print(jsonResult)
+                //print(jsonResult)
+                
                 var annotation = MKPointAnnotation()
-                for i in 0...numberVenues {
-                    var venueName = jsonResult[i]["name"].stringValue as String!
-                    var venueAddress = jsonResult[i]["formatted_address"].stringValue as String!
-                    var venueLat = jsonResult[i]["lat"].stringValue as String!
-                    var venueLng = jsonResult[i]["lng"].stringValue as String!
+                
+                for (index, object) in jsonResult {
+                    let venueName = object["name"].stringValue
+                    let venueAddress = object["formatted_address"].stringValue
+                    let venueLat = object["lat"].stringValue
+                    let venueLng = object["lng"].stringValue
                     self!.venueArray.append(venueName)
                     self!.venueArray.append(venueAddress)
                     self!.venueArray.append(venueLat)
                     self!.venueArray.append(venueLng)
-                    
-                    //annotation.coordinate.latitude = venueArray["lat"]
-                    //annotation.coordinate.longitude = venueArray["lng"]
-                    //annotation.setCoordinate(venueArray["lat"] as String! + venueArray["lng"] as String!)
-                    /*
-                    var venueLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(venueLat, venueLng)
-                    var annotation = MKPointAnnotation()
-                    annotation.coordinate = venueLocation
-                    annotation.title = self?.venueArray["name"] as String!
-                    self?.mapView.addAnnotation(annotation)
-                    */
                 }
                 print(self!.venueArray)
                 break
