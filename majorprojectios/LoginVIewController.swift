@@ -6,7 +6,7 @@ import RealmSwift
 class LoginViewController: UIViewController {
     
     /// API endpoint for logging in to use the service
-    let loginURL = "http://localhost:54321/api/user/login"
+    let loginURL = "http://192.168.1.65:54321/api/user/login"
     /// Email textfield from the storyboard view controller
     @IBOutlet weak var emailField: UITextField!
     /// Passwordtextfield from the storyboard view controller

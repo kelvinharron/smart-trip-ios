@@ -12,16 +12,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var mapView: MKMapView!
     
     // start all users in belfast
-    let startLocation = CLLocationCoordinate2D(latitude: 54.599181, longitude: -5.931083)
-    let distanceSpan:Double = 500
     let locationManager = CLLocationManager()
     var searchText = ""
     var venueArray = [String]()
-    var annotations = NSMutableArray()
     
     override func viewDidLoad() {
         establishLocationManager()
         self.searchBar.delegate = self
+        var lat = locationManager.location?.coordinate.latitude
+        var lng = locationManager.location?.coordinate.longitude
+        let center = CLLocationCoordinate2D(latitude: lat!, longitude: lng!)
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let region = MKCoordinateRegion(center: center, span: span)
+        mapView.setRegion(region, animated: true)
     }
     
     func establishLocationManager(){
@@ -38,8 +41,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
-        
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -47,9 +48,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
         searchText = searchBar.text!
-        print(searchText)
         searchVenues()
+        searchBar.endEditing(true)
     }
     
     func searchVenues() {
@@ -70,7 +72,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         /// Alamofire request made with validated params returend with the response.
         alamoManager.request(.POST,getEvents,parameters: venueParameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
             
-            
             /// SwiftyJSON used to easily parse JSON response, code sent by response includes message that is passed to message functions for display
             let data = serverResponse.data
             let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
@@ -80,21 +81,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             case 200:
                 let jsonResult = JSON(serverResponse.result.value!)
                 numberVenues = jsonResult.count // server returns max of 10 each time
-                //print(jsonResult)
-                
-                var annotation = MKPointAnnotation()
-                
+            
                 for (index, object) in jsonResult {
+    
                     let venueName = object["name"].stringValue
                     let venueAddress = object["formatted_address"].stringValue
+                    var venueLati = object["lat"].double
+                    var venueLngi = object["lng"].double
                     let venueLat = object["lat"].stringValue
                     let venueLng = object["lng"].stringValue
                     self!.venueArray.append(venueName)
                     self!.venueArray.append(venueAddress)
                     self!.venueArray.append(venueLat)
                     self!.venueArray.append(venueLng)
+                    let annotation = MKPointAnnotation()
+                    var points:CLLocationCoordinate2D = CLLocationCoordinate2DMake(venueLati!, venueLngi!);
+                    annotation.coordinate = points
+                    annotation.title = venueName
+                    annotation.subtitle = venueAddress
+                     self!.mapView.addAnnotation(annotation)
                 }
-                print(self!.venueArray)
                 break
             case 400:
                 self!.alertMessage("Invalid details", alertMessage: responseData!)
@@ -105,13 +111,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
-/// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.
-///
-/// - Parameter alertTitle: String used as title of the alert popup
-/// - Parameter alertMessage: String used as body of the alert popup
-func alertMessage(alertTitle: String, alertMessage: String){
-    let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-    self.presentViewController(alert, animated: true, completion: nil)
-}
+    /// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.
+    ///
+    /// - Parameter alertTitle: String used as title of the alert popup
+    /// - Parameter alertMessage: String used as body of the alert popup
+    func alertMessage(alertTitle: String, alertMessage: String){
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }

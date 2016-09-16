@@ -10,7 +10,7 @@ class RegisterViewController: UIViewController {
     
     
     /// API endpoint for signing up to use the service
-    let signupURL = "http://localhost:54321/api/user/signup"
+    let signupURL = "http://192.168.1.65:54321/api/user/signup"
     /// Email textfield from the storyboard view controller
     @IBOutlet weak var emailField: UITextField!
     /// Password textfield from the storyboard view controller

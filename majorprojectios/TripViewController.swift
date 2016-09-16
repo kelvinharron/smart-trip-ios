@@ -30,8 +30,8 @@ class TripViewController: UITableViewController {
                 let jsonResult = JSON(serverResponse.result.value!)
                 numberRows = jsonResult.count
                 
-                for i in 0...numberRows {
-                    var trip = jsonResult[i]["tripName"].stringValue as String!
+                for (index, object) in jsonResult {
+                    var trip = object["tripName"].stringValue
                     self.tripArray.append(trip)
                 }
                 self.tripTable.reloadData()
