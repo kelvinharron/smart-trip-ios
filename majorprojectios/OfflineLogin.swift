@@ -14,8 +14,8 @@ class User: Object {
 class Trip: Object {
     dynamic var tripname = ""
     dynamic var tripCity = ""
-    dynamic var startDate = NSDate()
-    dynamic var endDate = NSDate()
+    dynamic var startDate = ""
+    dynamic var endDate = ""
     let venues = List<Venue>()
 }
 

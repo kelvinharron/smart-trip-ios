@@ -3,21 +3,26 @@ import Alamofire
 import SwiftyJSON
 
 class TripViewController: UITableViewController {
-    @IBOutlet var tripTable: UITableView!
     
+    @IBOutlet var tripTable: UITableView!
+    let SUCCESS_CODE = 200
     var tripArray = [String]()
     var valueToPass = ""
-    
-    let getTripsURL = "http://localhost:54321/api/trip/"
-    
+    var tripToDelete : NSIndexPath? = nil
+    var getTripsURL = "http://192.168.1.65:54321/api/trip/"
+    var deleteTripURL = "http://192.168.1.65:54321/api/trip/delete"
     @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         getTripList()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     func getTripList(){
-        var numberRows = 1
+        var numberRows = -1
         Alamofire.request(.GET, getTripsURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
             
             switch serverResponse.result {
@@ -27,17 +32,19 @@ class TripViewController: UITableViewController {
                 
                 for i in 0...numberRows {
                     var trip = jsonResult[i]["tripName"].stringValue as String!
-                    print(trip)
                     self.tripArray.append(trip)
                 }
                 self.tripTable.reloadData()
                 break
             case .Failure(let error):
-                self.alertMessage("No connection", alertMessage: "We can't reach the service at the moment. Please contact the admin.")
+                if (numberRows != 0) {
+                    self.alertMessage("No connection", alertMessage: "We can't reach the service at the moment. Please contact the admin.")
+                }
                 break
             }
         }
     }
+    
     
     /// Returns a count of the number of cells in our table view
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,6 +58,20 @@ class TripViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            tripToDelete = indexPath
+            let selectedTrip = tripArray[indexPath.row]
+            deleteTrip(selectedTrip)
+            tripArray.removeAtIndex(indexPath.row)
+            tripTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segueSender") {
             
@@ -62,6 +83,21 @@ class TripViewController: UITableViewController {
                 destinationViewController.valueToPass = selectedRow
             }
         }
+    }
+    
+    func deleteTrip(selectedTrip: String){
+        let parameter = ["tripName": selectedTrip]
+        Alamofire.request(.DELETE, deleteTripURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
+            let data = serverResponse.data
+            let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
+            
+            if(serverResponse.response!.statusCode != self.SUCCESS_CODE) {
+                self.alertMessage("Error", alertMessage: responseData!)
+            } else {
+                self.alertMessage("Success", alertMessage: responseData!)
+            }
+        }
+        self.tripTable.reloadData()
     }
     
     /// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.

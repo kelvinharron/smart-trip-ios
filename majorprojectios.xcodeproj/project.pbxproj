@@ -78,6 +78,7 @@
 		FA725D821D88DA150025BD3E /* Trips */ = {
 			isa = PBXGroup;
 			children = (
+				FA10987A1D75122900EFE9B6 /* MapViewController.swift */,
 				FABDD07F1D74768200048618 /* Trip.storyboard */,
 				FA10987C1D7524C400EFE9B6 /* TripViewController.swift */,
 				FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */,
@@ -95,14 +96,6 @@
 				FABDD0881D747DE600048618 /* LoginVIewController.swift */,
 			);
 			name = Login;
-			sourceTree = "<group>";
-		};
-		FABDD0821D7477CC00048618 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				FA10987A1D75122900EFE9B6 /* MapViewController.swift */,
-			);
-			name = Main;
 			sourceTree = "<group>";
 		};
 		FABDD0831D7477D600048618 /* Realm */ = {
@@ -138,7 +131,6 @@
 				FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */,
 				FA725D821D88DA150025BD3E /* Trips */,
 				FABDD0831D7477D600048618 /* Realm */,
-				FABDD0821D7477CC00048618 /* Main */,
 				FABDD0811D7477C200048618 /* Login */,
 				FAE432151D7467E400CA9DB1 /* AppDelegate.swift */,
 				FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */,

@@ -8,7 +8,7 @@ class DetailTripViewController: UIViewController {
      @IBAction func unwindFromMap(segue: UIStoryboardSegue) {}
     
     var valueToPass = ""
-    let detailURL = "http://localhost:54321/api/trip/"
+    let detailURL = "http://192.168.1.65:54321/api/trip/"
     
     @IBOutlet weak var tripName: UILabel!
     @IBOutlet weak var tripCity: UILabel!
@@ -16,9 +16,7 @@ class DetailTripViewController: UIViewController {
     @IBOutlet weak var endDate: UILabel!
     
     override func viewDidAppear(animated: Bool) {
-        print("VALUE START")
         print(valueToPass)
-        print("VALUE END")
         updateLabels()
     }
     func updateLabels(){
