@@ -206,7 +206,7 @@
                                     <constraint firstAttribute="height" constant="30" id="8vS-1A-gj6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqX-6z-hJ0">
                                 <rect key="frame" x="20" y="158" width="335" height="30"/>
@@ -214,7 +214,7 @@
                                     <constraint firstAttribute="height" constant="30" id="JxN-BM-Hp7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to Smart Travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-6P-eNP">
                                 <rect key="frame" x="105" y="46" width="163" height="21"/>
@@ -307,7 +307,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="6w3-3n-Nrf"/>
         <segue reference="IN5-0h-6hg"/>
-        <segue reference="Hvt-Hw-G7e"/>
     </inferredMetricsTieBreakers>
 </document>

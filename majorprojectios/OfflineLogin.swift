@@ -10,7 +10,6 @@ class User: Object {
     dynamic var loginDate = NSDate()
 }
 
-
 class Trip: Object {
     dynamic var tripname = ""
     dynamic var tripCity = ""

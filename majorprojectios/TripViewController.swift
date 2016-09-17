@@ -14,10 +14,12 @@ class TripViewController: UITableViewController {
     @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
+		super.viewDidLoad()
         getTripList()
     }
     
     override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(true)
         self.tableView.reloadData()
     }
     
@@ -74,17 +76,17 @@ class TripViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segueSender") {
-            
-            let nav = segue.destinationViewController as! UINavigationController
-            let destinationViewController = nav.topViewController as! DetailTripViewController
-            
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let selectedRow = tripArray[indexPath.row]
-                destinationViewController.valueToPass = selectedRow
+			
+			let nav = segue.destinationViewController as! UINavigationController
+			let destinationViewController = nav.topViewController as! DetailTripViewController
+			
+			if let indexPath = self.tableView.indexPathForSelectedRow {
+				let selectedRow = tripArray[indexPath.row]
+				destinationViewController.valueToPass = selectedRow
             }
         }
     }
-    
+	
     func deleteTrip(selectedTrip: String){
         let parameter = ["tripName": selectedTrip]
         Alamofire.request(.DELETE, deleteTripURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
