@@ -15,14 +15,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     let locationManager = CLLocationManager()
     var searchText = ""
     var venueArray = [String]()
+    var annotation = MKPointAnnotation()
     var annotationArray: [MKPointAnnotation] = []
     
     override func viewDidLoad() {
-        establishLocationManager()
+        super.viewDidLoad()
         self.searchBar.delegate = self
-        let lat = locationManager.location?.coordinate.latitude
-        let lng = locationManager.location?.coordinate.longitude
-        let center = CLLocationCoordinate2D(latitude: lat!, longitude: lng!)
+        locationManager.requestWhenInUseAuthorization()
+        establishLocationManager()
+        let lat = 54.596516
+        let lng = -5.930172
+        let center = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: true)
@@ -75,34 +78,52 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         alamoManager.request(.POST,getEvents,parameters: venueParameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
             
             /// SwiftyJSON used to easily parse JSON response, code sent by response includes message that is passed to message functions for display
-            let data = serverResponse.data
-             let jsonResult = JSON(serverResponse.result.value!)
+            let errorData = serverResponse.data
+            let responseData = String(data: errorData!, encoding: NSUTF8StringEncoding)
+            
             if serverResponse.response!.statusCode != 200 {
-                self!.alertMessage("Error", alertMessage: "Unable to reach server. Please try agai")
+                self!.alertMessage("None found", alertMessage: responseData!)
             }
-            for (index, object) in jsonResult {
-                let venueName = object["name"].stringValue
-                let venueAddress = object["formatted_address"].stringValue
-                var venueLati = object["lat"].double
-                var venueLngi = object["lng"].double
-                let venueLat = object["lat"].stringValue
-                let venueLng = object["lng"].stringValue
-                self!.venueArray.append(venueName)
-                self!.venueArray.append(venueAddress)
-                self!.venueArray.append(venueLat)
-                self!.venueArray.append(venueLng)
+            if let data = serverResponse.result.value {
+                let jsonResult = JSON(data)
+                for (index, object) in jsonResult {
+                    let venueName = object["name"].stringValue
+                    let venueAddress = object["formatted_address"].stringValue
+                    let venueLati = object["lat"].double
+                    let venueLngi = object["lng"].double
+                    let venueLat = object["lat"].stringValue
+                    let venueLng = object["lng"].stringValue
+                    self!.venueArray.append(venueName)
+                    self!.venueArray.append(venueAddress)
+                    self!.venueArray.append(venueLat)
+                    self!.venueArray.append(venueLng)
                 
-                let annotation = MKPointAnnotation()
-                var points:CLLocationCoordinate2D = CLLocationCoordinate2DMake(venueLati!, venueLngi!);
-                annotation.title = object["name"].stringValue
-                annotation.subtitle = object["formatted_address"].stringValue
-                annotation.coordinate = points
-                self!.annotationArray.append(annotation)
+                    var points:CLLocationCoordinate2D = CLLocationCoordinate2DMake(venueLati!, venueLngi!);
+                    self!.annotation.title = object["name"].stringValue
+                    self!.annotation.subtitle = object["formatted_address"].stringValue
+                    self!.annotation.coordinate = points
+                    
+                    self!.annotationArray.append(self!.annotation)
+                }
+                self!.mapView.addAnnotations(self!.annotationArray)
             }
-            self!.mapView.addAnnotations(self!.annotationArray)
+            
         }
         
     }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let returnedAnnotationView:MKAnnotationView = PinAnnotation.createViewAnnotationForMap(self.mapView, annotation: annotation)
+        let button = UIButton(type: .Custom)
+        button.setTitle("More Info", forState: .Normal)
+        button.addTarget(self, action: nil, forControlEvents: .TouchUpInside)
+        returnedAnnotationView.rightCalloutAccessoryView = button
+        return returnedAnnotationView
+    }
+    
+    
+    
+
     
     
     /// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.
@@ -113,5 +134,31 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+}
+
+//PinAnnotation class that implements the MKAnnotation protocol
+class PinAnnotation:NSObject, MKAnnotation{
+    var coordinate: CLLocationCoordinate2D
+    var title: String?
+    var subtitle: String?
+    
+    init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
+        self.coordinate = coordinate
+        self.title = title
+        self.subtitle = subtitle
+    }
+    
+    class func createViewAnnotationForMap(mapView:MKMapView, annotation:MKAnnotation)->MKAnnotationView{
+        if let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("PinAnnotation"){
+            return annotationView
+        }else{
+            let returnedAnnotationView:MKPinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier:"PinAnnotation")
+            returnedAnnotationView.pinTintColor = UIColor.redColor()
+            returnedAnnotationView.animatesDrop = true
+            returnedAnnotationView.canShowCallout = true
+            return returnedAnnotationView
+            
+        }
     }
 }
