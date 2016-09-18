@@ -3,7 +3,7 @@ import SwiftyJSON
 import RealmSwift
 
 /// Login class defines the logic of the login view controller
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 	
 	/// API endpoint for logging in to use the service
 	let loginURL = "http://192.168.1.65:54321/api/user/login"
