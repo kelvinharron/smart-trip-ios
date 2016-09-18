@@ -18,6 +18,7 @@
 		FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
 		FA0C439E1D89A9DE00B36706 /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */; };
 		FA0C43A01D8A15B000B36706 /* EditTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C439F1D8A15B000B36706 /* EditTripViewController.swift */; };
+		FA18577B1D8DF0B9002A3DE5 /* MapVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18577A1D8DF0B9002A3DE5 /* MapVenueViewController.swift */; };
 		FABDD0801D74768200048618 /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Trip.storyboard */; };
 		FABDD08B1D74B10700048618 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FABDD08A1D74B10700048618 /* Readme.md */; };
 		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
@@ -32,6 +33,7 @@
 		FA0C439F1D8A15B000B36706 /* EditTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTripViewController.swift; sourceTree = "<group>"; };
 		FA10987A1D75122900EFE9B6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FA10987C1D7524C400EFE9B6 /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		FA18577A1D8DF0B9002A3DE5 /* MapVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVenueViewController.swift; sourceTree = "<group>"; };
 		FA725D831D88DA460025BD3E /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineLogin.swift; sourceTree = "<group>"; };
 		FABDD07F1D74768200048618 /* Trip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */,
 				FA725D831D88DA460025BD3E /* AddTripViewController.swift */,
 				FA0C439F1D8A15B000B36706 /* EditTripViewController.swift */,
+				FA18577A1D8DF0B9002A3DE5 /* MapVenueViewController.swift */,
 			);
 			name = Trips;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */,
 				FA0C43A01D8A15B000B36706 /* EditTripViewController.swift in Sources */,
 				FA0C43961D88EA4600B36706 /* TripViewController.swift in Sources */,
+				FA18577B1D8DF0B9002A3DE5 /* MapVenueViewController.swift in Sources */,
 				FA0C439E1D89A9DE00B36706 /* DetailTripViewController.swift in Sources */,
 				FA0C43971D88EA4600B36706 /* AddTripViewController.swift in Sources */,
 				FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */,

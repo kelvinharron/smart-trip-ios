@@ -5,26 +5,30 @@ import SwiftyJSON
 class TripViewController: UITableViewController {
     
     @IBOutlet var tripTable: UITableView!
-    let SUCCESS_CODE = 200
+	@IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {}
+	let SUCCESS_CODE = 200
     var tripArray = [String]()
     var valueToPass = ""
     var tripToDelete : NSIndexPath? = nil
     var getTripsURL = "http://192.168.1.65:54321/api/trip/"
-    var deleteTripURL = "http://192.168.1.65:54321/api/trip/delete"
-    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {}
+    var deleteTripURL = "http://192.168.1.65:54321/api/trip/"
     
     override func viewDidLoad() {
 		super.viewDidLoad()
-        getTripList()
+		self.reloadData()
     }
     
     override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(true)
-        self.tableView.reloadData()
+		self.tableView.tableFooterView = UIView()
     }
-    
+	
+	func reloadData(){
+		getTripList()
+	}
+	
     func getTripList(){
-        var numberRows = -1
+        var numberRows = 0
         Alamofire.request(.GET, getTripsURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
             
             switch serverResponse.result {
@@ -46,8 +50,7 @@ class TripViewController: UITableViewController {
             }
         }
     }
-    
-    
+	
     /// Returns a count of the number of cells in our table view
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tripArray.count
@@ -56,6 +59,8 @@ class TripViewController: UITableViewController {
     /// Returns an index path so we can configure a cell for display
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tripTable.dequeueReusableCellWithIdentifier("tripCell")!
+		cell.alpha = 0
+		UIView.animateWithDuration(1, animations: { cell.alpha = 1})
         cell.textLabel?.text = tripArray[indexPath.row]
         return cell
     }
@@ -73,7 +78,22 @@ class TripViewController: UITableViewController {
             tripTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
-    
+	
+	func deleteTrip(selectedTrip: String){
+		let parameter = ["tripName": selectedTrip]
+		Alamofire.request(.DELETE, deleteTripURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
+			let data = serverResponse.data
+			let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
+			
+			if(serverResponse.response!.statusCode != self.SUCCESS_CODE) {
+				self.alertMessage("Error", alertMessage: responseData!)
+			} else {
+				self.alertMessage("Success", alertMessage: responseData!)
+			}
+		}
+		self.tripTable.reloadData()
+	}
+	
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segueSender") {
 			
@@ -82,26 +102,11 @@ class TripViewController: UITableViewController {
 			
 			if let indexPath = self.tableView.indexPathForSelectedRow {
 				let selectedRow = tripArray[indexPath.row]
-				destinationViewController.valueToPass = selectedRow
+				destinationViewController.selectedTripName = selectedRow
             }
         }
     }
 	
-    func deleteTrip(selectedTrip: String){
-        let parameter = ["tripName": selectedTrip]
-        Alamofire.request(.DELETE, deleteTripURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
-            let data = serverResponse.data
-            let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
-            
-            if(serverResponse.response!.statusCode != self.SUCCESS_CODE) {
-                self.alertMessage("Error", alertMessage: responseData!)
-            } else {
-                self.alertMessage("Success", alertMessage: responseData!)
-            }
-        }
-        self.tripTable.reloadData()
-    }
-    
     /// Popup alert that can be dismissed. Used to inform/warn the user as a result of their action not being accepted.
     ///
     /// - Parameter alertTitle: String used as title of the alert popup
