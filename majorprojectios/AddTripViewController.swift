@@ -13,11 +13,17 @@ class AddTripViewController: UIViewController {
 	@IBOutlet weak var endDatePicker: UIDatePicker!
 	@IBOutlet weak var tripNameField: UITextField!
 	@IBOutlet weak var tripCityField: UITextField!
+	let dateFormatter = NSDateFormatter()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		startDatePicker.minimumDate = NSDate()
+		endDatePicker.minimumDate = NSDate()
+	}
 	
 	@IBAction func startDatePicker(sender: AnyObject) {
 		/// Format date to simpler string format before making POST request
 		/// Format: DD-MM-YYYY
-		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "dd-MM-yyyy"
 		
 	}
@@ -25,7 +31,6 @@ class AddTripViewController: UIViewController {
 	@IBAction func endDatePicker(sender: AnyObject) {
 		/// Format date to simpler string format before making POST request
 		/// Format: DD-MM-YYYY
-		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "dd-MM-yyyy"
 	}
 	
@@ -35,10 +40,16 @@ class AddTripViewController: UIViewController {
 	}
 	
 	func validateFields(){
+		let startDate = startDatePicker.date
+		let endDate = endDatePicker.date
+		let compareResult = startDate.compare(endDate)
 		if(tripNameField.text!.isEmpty) || (tripCityField.text!.isEmpty) {
 			alertMessage("Empty text fields", alertMessage: "Please fill out all text fields when registering.")
+		} else if compareResult == NSComparisonResult.OrderedDescending {
+			alertMessage("Bad dates", alertMessage: "Please ensure your trip end date is not set before its start date")
+		} else {
+			createTrip()
 		}
-		createTrip()
 	}
 	
 	func createTrip() {
