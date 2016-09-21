@@ -10,8 +10,7 @@ class TripViewController: UITableViewController {
     var tripArray = [String]()
     var valueToPass = ""
     var tripToDelete : NSIndexPath? = nil
-    var getTripsURL = "http://192.168.1.65:54321/api/trip/"
-    var deleteTripURL = "http://192.168.1.65:54321/api/trip/"
+    var deleteTripURL = "http://143.117.187.228:7892/api/trip/"
     
     override func viewDidLoad() {
 		super.viewDidLoad()
@@ -29,7 +28,7 @@ class TripViewController: UITableViewController {
 	
     func getTripList(){
         var numberRows = 0
-        Alamofire.request(.GET, getTripsURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
+        Alamofire.request(.GET, API.getAllTripsURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
             
             switch serverResponse.result {
             case .Success(let response):
@@ -81,7 +80,7 @@ class TripViewController: UITableViewController {
 	
 	func deleteTrip(selectedTrip: String){
 		let parameter = ["tripName": selectedTrip]
-		Alamofire.request(.DELETE, deleteTripURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
+		Alamofire.request(.DELETE, API.deleteTripURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
 			let data = serverResponse.data
 			let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
 			

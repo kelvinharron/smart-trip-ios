@@ -16,9 +16,7 @@ class DetailTripViewController: UITableViewController {
 	var venueArray = [String]()
 	var selectedTripName = ""
 	var venueToDelete : NSIndexPath? = nil
-	let getDetailedTripURL = "http://192.168.1.65:54321/api/trip/"
-	let	getVenueListURL = "http://192.168.1.65:54321/api/venue/"
-	let deleteVenueURL = "http://192.168.1.65:54321/api/venue/"
+
 	let SUCCESS_CODE = 200
 	private let queue = NSOperationQueue()
 	
@@ -36,7 +34,7 @@ class DetailTripViewController: UITableViewController {
 	}
 	
 	func updateTripLabels(){
-		var appendedTripURL = getDetailedTripURL+selectedTripName
+		var appendedTripURL = API.getSingleTripURL+selectedTripName
 		appendedTripURL = appendedTripURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
 		Alamofire.request(.GET, appendedTripURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
 			
@@ -66,7 +64,7 @@ class DetailTripViewController: UITableViewController {
 	func getVenueList(){
 		var numberRows = 0
 		
-		Alamofire.request(.GET, getVenueListURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
+		Alamofire.request(.GET, API.getAllVenuesURL, parameters: nil, encoding: .JSON).validate().responseJSON { serverResponse in
 			switch serverResponse.result {
 			case .Success(let response):
 				let jsonResult = JSON(serverResponse.result.value!)
@@ -118,7 +116,7 @@ class DetailTripViewController: UITableViewController {
 	func deleteVenue(selectedVenue: String){
 		let parameter = ["venueName": selectedVenue]
 		
-		Alamofire.request(.DELETE, deleteVenueURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
+		Alamofire.request(.DELETE, API.deleteVenueURL, parameters: parameter, encoding: .JSON).validate().responseJSON { serverResponse in
 			let data = serverResponse.data
 			let responseData = String(data: data!, encoding: NSUTF8StringEncoding)
 			

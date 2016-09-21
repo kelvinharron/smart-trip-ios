@@ -7,19 +7,22 @@ class MapVenueViewController: UIViewController, MKMapViewDelegate, CLLocationMan
 	
 	@IBOutlet weak var mapView: MKMapView!
 	let SUCCESS_CODE = 200
-	let	getVenueListURL = "http://192.168.1.65:54321/api/venue/"
+
 	var selectedVenueName = ""
 	let locationManager = CLLocationManager()
 	var venueArray = [String]()
 	var annotation = MKPointAnnotation()
 	var annotationArray: [MKPointAnnotation] = []
+	
+	let lat = 54.581664 /// locationManager.location?.coordinate.latitude
+	let lng = -5.937680 ///locationManager.location?.coordinate.longitude
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		mapView.delegate = self
 		establishLocationManager()
-		let lat = locationManager.location?.coordinate.latitude
-		let lng = locationManager.location?.coordinate.longitude
-		let center = CLLocationCoordinate2D(latitude: lat!, longitude: lng!)
+		
+		let center = CLLocationCoordinate2D(latitude: lat, longitude: lng)
 		let span = MKCoordinateSpanMake(0.05, 0.05)
 		let region = MKCoordinateRegion(center: center, span: span)
 		mapView.setRegion(region, animated: true)
@@ -39,7 +42,8 @@ class MapVenueViewController: UIViewController, MKMapViewDelegate, CLLocationMan
 	func showRouteOnMap() {
 		let destination = annotationArray[0]
 		let request = MKDirectionsRequest()
-		request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!), addressDictionary: nil))
+		request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(lat, lng), addressDictionary: nil))
+			
 		request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: destination.coordinate.latitude, longitude: destination.coordinate.longitude), addressDictionary: nil))
 		request.requestsAlternateRoutes = true
 		request.transportType = .Walking
@@ -78,7 +82,7 @@ class MapVenueViewController: UIViewController, MKMapViewDelegate, CLLocationMan
 	}
 	
 	func drawMarker(){
-		var appendedVenueURL = getVenueListURL+selectedVenueName
+		var appendedVenueURL = API.getSingleVenueURL+selectedVenueName
 		print(appendedVenueURL)
 		appendedVenueURL = appendedVenueURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
 		

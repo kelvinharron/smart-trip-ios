@@ -5,8 +5,7 @@ import RealmSwift
 /// Login class defines the logic of the login view controller
 class LoginViewController: UIViewController, UITextFieldDelegate {
 	
-	/// API endpoint for logging in to use the service
-	let loginURL = "http://192.168.1.65:54321/api/user/login"
+	
 	/// Email textfield from the storyboard view controller
 	@IBOutlet weak var emailField: UITextField!
 	/// Passwordtextfield from the storyboard view controller
@@ -48,7 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		]
 		
 		/// Alamofire request made with validated params returned with the response.
-		alamoManager.request(.POST,loginURL,parameters: parameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
+		alamoManager.request(.POST,API.loginURL,parameters: parameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
 			
 			// Before attempting to parse result, check if server is offline
 			if (serverResponse.result.error!.code == self!.offlineErrorCode) {

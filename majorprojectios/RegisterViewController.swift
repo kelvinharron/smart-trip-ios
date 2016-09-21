@@ -9,8 +9,7 @@ class RegisterViewController: UIViewController {
 	
 	
 	
-	/// API endpoint for signing up to use the service
-	let signupURL = "http://192.168.1.65:54321/api/user/signup"
+
 	/// Email textfield from the storyboard view controller
 	@IBOutlet weak var emailField: UITextField!
 	/// Password textfield from the storyboard view controller
@@ -58,7 +57,7 @@ class RegisterViewController: UIViewController {
 		]
 		
 		/// Alamofire request made with validated params returend with the response.
-		alamoManager.request(.POST,signupURL,parameters: parameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
+		alamoManager.request(.POST,API.signupURL,parameters: parameters, encoding: .JSON).validate().responseJSON { [weak self] serverResponse in
 			
 			// Before attempting to parse result, check if server is offline
 			if (serverResponse.result.error!.code == self!.offlineErrorCode) {

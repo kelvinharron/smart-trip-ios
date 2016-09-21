@@ -6,11 +6,12 @@ import Alamofire
 ///
 class WelcomeViewController: UIViewController {
 	
+	/// Unwind from any view controller if an exit property is set to 'unwindToWelcomeViewController'
+	@IBAction func unwindToWelcomeViewController(segue: UIStoryboardSegue) {}
+	
     /// Label from view controller that is used to display server status
     @IBOutlet weak var serverStatus: UILabel!
-    /// Status URL returns a 200 if operational, used to update status label
-    let statusURL = "http://192.168.1.65:54321/status"
-    
+	
     /// Swift lifecycle function, called only once when the view is
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class WelcomeViewController: UIViewController {
     /// Using Alamofire built in validate function we can pull out a .Success and .Failure and switch on result
     ///Label colour updated depending on request result
     func checkServerStatus(){
-        Alamofire.request(.GET, statusURL).validate().responseJSON { serverResponse in
+        Alamofire.request(.GET, API.checkServiceURL).validate().responseJSON { serverResponse in
             switch serverResponse.result {
             case .Success(let response):
                 print("Server operational") // console print
