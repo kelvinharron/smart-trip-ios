@@ -1,6 +1,6 @@
 # Smart Trip iOS Client
 
-Itinerary builder companion application to the [service component.](https://github.com/kelvinharron/smart-trip-service)
+Itinerary builder companion application to the [service component](https://github.com/kelvinharron/smart-trip-service), created for my Masters Individual Project.
 
 Current build is Swift 2.2. Views designed for iPhone 6, 6S and 7 screen sizes.
 
