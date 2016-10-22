@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
-import RealmSwift
 
 class AddTripViewController: UIViewController {
 	

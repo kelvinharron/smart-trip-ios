@@ -1,6 +1,5 @@
 import Alamofire
 import SwiftyJSON
-import RealmSwift
 
 /// Login class defines the logic of the login view controller
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -100,7 +99,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		var controller = storyboard.instantiateViewControllerWithIdentifier("InitialController") as UIViewController
 		self.presentViewController(controller, animated: true, completion: nil)
 	}
-	
+	/*
 	func checkOfflineUser(){
 		let realm = try! Realm()
 		let offlineUser = realm.objects(User)
@@ -109,4 +108,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		///     print(login) success
 		///  }
 	}
-}
+*/
+ }

@@ -1,10 +1,9 @@
 import Foundation
-import RealmSwift
 
 /// Realm is the offline database implementation that is local to the device.
 /// Gets email from signup and stores it offline. If connection not available user can still login offline read only mode
 ///
-class User: Object {
+/*class User: Object {
     
     dynamic var email = ""
     dynamic var loginDate = NSDate()
@@ -29,3 +28,4 @@ class Venue: Object {
 class VenueList: Object {
     dynamic var venueType = ""
 }
+ */
