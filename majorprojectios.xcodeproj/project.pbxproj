@@ -7,38 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57E8EB401F97495B1C65B5F4 /* Pods_majorprojectios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */; };
 		FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */; };
-		FA0C43961D88EA4600B36706 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987C1D7524C400EFE9B6 /* TripViewController.swift */; };
-		FA0C43971D88EA4600B36706 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA725D831D88DA460025BD3E /* AddTripViewController.swift */; };
-		FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */; };
-		FA0C43991D88EA4600B36706 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10987A1D75122900EFE9B6 /* MapViewController.swift */; };
 		FA0C439A1D88EA4600B36706 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* RegisterViewController.swift */; };
 		FA0C439B1D88EA4600B36706 /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* LoginVIewController.swift */; };
 		FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
-		FA0C439E1D89A9DE00B36706 /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */; };
-		FA0C43A01D8A15B000B36706 /* EditTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C439F1D8A15B000B36706 /* EditTripViewController.swift */; };
 		FA0CD0601D92244A00D0680C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CD05F1D92244A00D0680C /* Service.swift */; };
-		FA18577B1D8DF0B9002A3DE5 /* MapVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18577A1D8DF0B9002A3DE5 /* MapVenueViewController.swift */; };
-		FABDD0801D74768200048618 /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABDD07F1D74768200048618 /* Trip.storyboard */; };
 		FABDD08B1D74B10700048618 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FABDD08A1D74B10700048618 /* Readme.md */; };
 		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
 		FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.release.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.release.xcconfig"; sourceTree = "<group>"; };
-		129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_majorprojectios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-majorprojectios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios.debug.xcconfig"; sourceTree = "<group>"; };
-		FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTripViewController.swift; sourceTree = "<group>"; };
-		FA0C439F1D8A15B000B36706 /* EditTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTripViewController.swift; sourceTree = "<group>"; };
 		FA0CD05F1D92244A00D0680C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		FA10987A1D75122900EFE9B6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		FA10987C1D7524C400EFE9B6 /* TripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
-		FA18577A1D8DF0B9002A3DE5 /* MapVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVenueViewController.swift; sourceTree = "<group>"; };
-		FA725D831D88DA460025BD3E /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
-		FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineLogin.swift; sourceTree = "<group>"; };
-		FABDD07F1D74768200048618 /* Trip.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
 		FABDD0861D747C9B00048618 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FABDD0881D747DE600048618 /* LoginVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
 		FABDD08A1D74B10700048618 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Readme.md; path = Pods/Readme.md; sourceTree = "<group>"; };
@@ -55,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E8EB401F97495B1C65B5F4 /* Pods_majorprojectios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,50 +44,8 @@
 		2703DBCCF50F7BAAAA3BDC25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				129D8225E87B4AF170F0F38D /* Pods_majorprojectios.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E63ACFD7D97DFC7E14FBC2C8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */,
-				06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FA725D821D88DA150025BD3E /* Trips */ = {
-			isa = PBXGroup;
-			children = (
-				FA10987A1D75122900EFE9B6 /* MapViewController.swift */,
-				FABDD07F1D74768200048618 /* Trip.storyboard */,
-				FA10987C1D7524C400EFE9B6 /* TripViewController.swift */,
-				FA0C439D1D89A9DE00B36706 /* DetailTripViewController.swift */,
-				FA725D831D88DA460025BD3E /* AddTripViewController.swift */,
-				FA0C439F1D8A15B000B36706 /* EditTripViewController.swift */,
-				FA18577A1D8DF0B9002A3DE5 /* MapVenueViewController.swift */,
-			);
-			name = Trips;
-			sourceTree = "<group>";
-		};
-		FABDD0811D7477C200048618 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
-				FABDD0861D747C9B00048618 /* RegisterViewController.swift */,
-				FABDD0881D747DE600048618 /* LoginVIewController.swift */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		FABDD0831D7477D600048618 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				FA9E924A1D838AD700B769E8 /* OfflineLogin.swift */,
-			);
-			name = Realm;
 			sourceTree = "<group>";
 		};
 		FAE432091D7467E400CA9DB1 = {
@@ -117,7 +54,6 @@
 				FABDD08A1D74B10700048618 /* Readme.md */,
 				FAE432141D7467E400CA9DB1 /* majorprojectios */,
 				FAE432131D7467E400CA9DB1 /* Products */,
-				E63ACFD7D97DFC7E14FBC2C8 /* Pods */,
 				2703DBCCF50F7BAAAA3BDC25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -133,10 +69,10 @@
 		FAE432141D7467E400CA9DB1 /* majorprojectios */ = {
 			isa = PBXGroup;
 			children = (
+				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
+				FABDD0861D747C9B00048618 /* RegisterViewController.swift */,
+				FABDD0881D747DE600048618 /* LoginVIewController.swift */,
 				FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */,
-				FA725D821D88DA150025BD3E /* Trips */,
-				FABDD0831D7477D600048618 /* Realm */,
-				FABDD0811D7477C200048618 /* Login */,
 				FAE432151D7467E400CA9DB1 /* AppDelegate.swift */,
 				FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */,
 				FAE432211D7467E400CA9DB1 /* Info.plist */,
@@ -152,12 +88,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAE432241D7467E400CA9DB1 /* Build configuration list for PBXNativeTarget "majorprojectios" */;
 			buildPhases = (
-				B3F94014CEFD92E6487D4DDC /* [CP] Check Pods Manifest.lock */,
 				FAE4320E1D7467E400CA9DB1 /* Sources */,
 				FAE4320F1D7467E400CA9DB1 /* Frameworks */,
 				FAE432101D7467E400CA9DB1 /* Resources */,
-				C986FEAC58B3EF6DD1CA69CD /* [CP] Embed Pods Frameworks */,
-				3FFA64C1F363BA5B27430273 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,60 +141,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */,
-				FABDD0801D74768200048618 /* Trip.storyboard in Resources */,
 				FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3FFA64C1F363BA5B27430273 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B3F94014CEFD92E6487D4DDC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C986FEAC58B3EF6DD1CA69CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-majorprojectios/Pods-majorprojectios-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAE4320E1D7467E400CA9DB1 /* Sources */ = {
@@ -269,14 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */,
-				FA0C43A01D8A15B000B36706 /* EditTripViewController.swift in Sources */,
-				FA0C43961D88EA4600B36706 /* TripViewController.swift in Sources */,
-				FA18577B1D8DF0B9002A3DE5 /* MapVenueViewController.swift in Sources */,
-				FA0C439E1D89A9DE00B36706 /* DetailTripViewController.swift in Sources */,
 				FA0CD0601D92244A00D0680C /* Service.swift in Sources */,
-				FA0C43971D88EA4600B36706 /* AddTripViewController.swift in Sources */,
-				FA0C43981D88EA4600B36706 /* OfflineLogin.swift in Sources */,
-				FA0C43991D88EA4600B36706 /* MapViewController.swift in Sources */,
 				FA0C439A1D88EA4600B36706 /* RegisterViewController.swift in Sources */,
 				FA0C439B1D88EA4600B36706 /* LoginVIewController.swift in Sources */,
 				FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */,
@@ -383,33 +260,33 @@
 		};
 		FAE432251D7467E400CA9DB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C92873A4555DC7E6065FB9FD /* Pods-majorprojectios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = majorprojectios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinhharron.majorprojectios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinharron.smarttripmasters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		FAE432261D7467E400CA9DB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06548E0AF11FFC5EFFFFBCAE /* Pods-majorprojectios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = majorprojectios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinhharron.majorprojectios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinharron.smarttripmasters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
