@@ -66,7 +66,7 @@
 		FAE432091D7467E400CA9DB1 = {
 			isa = PBXGroup;
 			children = (
-				FAE432141D7467E400CA9DB1 /* majorprojectios */,
+				FAE432141D7467E400CA9DB1 /* smarttrip */,
 				FAE432131D7467E400CA9DB1 /* Products */,
 				2703DBCCF50F7BAAAA3BDC25 /* Frameworks */,
 				CBE6DC7F95CEC9F67BDEE21D /* Pods */,
@@ -81,7 +81,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FAE432141D7467E400CA9DB1 /* majorprojectios */ = {
+		FAE432141D7467E400CA9DB1 /* smarttrip */ = {
 			isa = PBXGroup;
 			children = (
 				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
@@ -94,7 +94,7 @@
 				FA71A735204C76F9004FFBA1 /* GoogleService-Info.plist */,
 				FA0CD05F1D92244A00D0680C /* Service.swift */,
 			);
-			path = majorprojectios;
+			path = smarttrip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,7 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = majorprojectios/Info.plist;
+				INFOPLIST_FILE = smarttrip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinharron.smarttripios;
@@ -414,7 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = majorprojectios/Info.plist;
+				INFOPLIST_FILE = smarttrip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinharron.smarttripios;
