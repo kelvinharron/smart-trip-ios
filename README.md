@@ -1,20 +1,19 @@
-# Smart Trip iOS Client
+# Smart Trip iOS
 
 Itinerary builder companion application to the [service component](https://github.com/kelvinharron/smart-trip-service), created for my Masters Individual Project.
 
-Current build is Swift 2.2. Views designed for iPhone 6, 6S and 7 screen sizes.
+Current build is Swift 4 ready. Logic and views stirpped out for now as the plan is to build it into a usable application instead of a demo.
 
-Demoed with service component running on localhost, current location settings are hardcoded to Belfast.
 
-### Dependencies
+### Dependencies that were in use
 
-- [Alamofire](https://github.com/Alamofire/Alamofire)
-- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
-- [Realm](https://github.com/realm/realm-cocoa)
+- <s>Alamofire</s> Using URLRequest now 
+- <s>SwiftyJSON</s> Using default Swift implementaiton now. 
+- <s>Realm</s> No need to persist data locally at present.
 
-### To-do 
+### TODO 
 
-1. Migrate to Swift 3.
-2. Refactor needed throughout service as lots of bloated ViewController files are present.
-3. Rebuild views to reszie to screen size of iPhone.
-3. Further introduce Realm read and write, checking if connection is offline and allowing a read only mode of existing trips and venues.
+1. <s>Migrate to Swift 4</s>. 
+2. Rewrite with an architecture that decouples view and logic. IN PROGRESS
+3. Implement dynamic views that aren't hardcoded to one screen size :).
+
