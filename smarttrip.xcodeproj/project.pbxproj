@@ -22,7 +22,7 @@
 		FABDD0861D747C9B00048618 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FABDD0881D747DE600048618 /* LoginVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
 		FABDD08A1D74B10700048618 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Readme.md; path = Pods/Readme.md; sourceTree = "<group>"; };
-		FAE432121D7467E400CA9DB1 /* majorprojectios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majorprojectios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE432121D7467E400CA9DB1 /* smarttrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smarttrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE432151D7467E400CA9DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FAE4321A1D7467E400CA9DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		FAE432131D7467E400CA9DB1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAE432121D7467E400CA9DB1 /* majorprojectios.app */,
+				FAE432121D7467E400CA9DB1 /* smarttrip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,9 +84,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FAE432111D7467E400CA9DB1 /* majorprojectios */ = {
+		FAE432111D7467E400CA9DB1 /* smarttrip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAE432241D7467E400CA9DB1 /* Build configuration list for PBXNativeTarget "majorprojectios" */;
+			buildConfigurationList = FAE432241D7467E400CA9DB1 /* Build configuration list for PBXNativeTarget "smarttrip" */;
 			buildPhases = (
 				FAE4320E1D7467E400CA9DB1 /* Sources */,
 				FAE4320F1D7467E400CA9DB1 /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = majorprojectios;
+			name = smarttrip;
 			productName = majorprojectios;
-			productReference = FAE432121D7467E400CA9DB1 /* majorprojectios.app */;
+			productReference = FAE432121D7467E400CA9DB1 /* smarttrip.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FAE4320D1D7467E400CA9DB1 /* Build configuration list for PBXProject "majorprojectios" */;
+			buildConfigurationList = FAE4320D1D7467E400CA9DB1 /* Build configuration list for PBXProject "smarttrip" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -130,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FAE432111D7467E400CA9DB1 /* majorprojectios */,
+				FAE432111D7467E400CA9DB1 /* smarttrip */,
 			);
 		};
 /* End PBXProject section */
@@ -293,7 +293,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FAE4320D1D7467E400CA9DB1 /* Build configuration list for PBXProject "majorprojectios" */ = {
+		FAE4320D1D7467E400CA9DB1 /* Build configuration list for PBXProject "smarttrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAE432221D7467E400CA9DB1 /* Debug */,
@@ -302,7 +302,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAE432241D7467E400CA9DB1 /* Build configuration list for PBXNativeTarget "majorprojectios" */ = {
+		FAE432241D7467E400CA9DB1 /* Build configuration list for PBXNativeTarget "smarttrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAE432251D7467E400CA9DB1 /* Debug */,

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:majorprojectios.xcodeproj">
+      location = "self:/Users/kelvinharron/git/smart-trip-ios/smarttrip.xcodeproj">
    </FileRef>
 </Workspace>
