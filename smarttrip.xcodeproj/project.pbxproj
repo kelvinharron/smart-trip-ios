@@ -9,11 +9,8 @@
 /* Begin PBXBuildFile section */
 		760589CB7EA8F710629A282B /* Pods_smarttrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350AA87388DD567B0E54C9F9 /* Pods_smarttrip.framework */; };
 		FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */; };
-		FA0C439A1D88EA4600B36706 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0861D747C9B00048618 /* RegisterViewController.swift */; };
-		FA0C439B1D88EA4600B36706 /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDD0881D747DE600048618 /* LoginVIewController.swift */; };
 		FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
-		FA0CD0601D92244A00D0680C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CD05F1D92244A00D0680C /* Service.swift */; };
-		FA71A736204C76F9004FFBA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA71A735204C76F9004FFBA1 /* GoogleService-Info.plist */; };
+		FADB3F3A204C9B1D00DB59C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */; };
 		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
 		FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -22,10 +19,8 @@
 		350AA87388DD567B0E54C9F9 /* Pods_smarttrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smarttrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5D3FF26881FE5377DD6DFC /* Pods-smarttrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarttrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smarttrip/Pods-smarttrip.debug.xcconfig"; sourceTree = "<group>"; };
 		8EC7A4274B4CB6B6389B4717 /* Pods-smarttrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarttrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-smarttrip/Pods-smarttrip.release.xcconfig"; sourceTree = "<group>"; };
-		FA0CD05F1D92244A00D0680C /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		FA71A735204C76F9004FFBA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FABDD0861D747C9B00048618 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		FABDD0881D747DE600048618 /* LoginVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
+		FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FADB3F3B204CA15A00DB59C8 /* smarttrip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = smarttrip.entitlements; sourceTree = "<group>"; };
 		FAE432121D7467E400CA9DB1 /* smarttrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smarttrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE432151D7467E400CA9DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -84,15 +79,13 @@
 		FAE432141D7467E400CA9DB1 /* smarttrip */ = {
 			isa = PBXGroup;
 			children = (
+				FADB3F3B204CA15A00DB59C8 /* smarttrip.entitlements */,
 				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
-				FABDD0861D747C9B00048618 /* RegisterViewController.swift */,
-				FABDD0881D747DE600048618 /* LoginVIewController.swift */,
 				FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */,
 				FAE432151D7467E400CA9DB1 /* AppDelegate.swift */,
 				FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */,
 				FAE432211D7467E400CA9DB1 /* Info.plist */,
-				FA71A735204C76F9004FFBA1 /* GoogleService-Info.plist */,
-				FA0CD05F1D92244A00D0680C /* Service.swift */,
+				FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */,
 			);
 			path = smarttrip;
 			sourceTree = "<group>";
@@ -133,6 +126,11 @@
 					FAE432111D7467E400CA9DB1 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = PD5QMARB3X;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -161,7 +159,7 @@
 			files = (
 				FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */,
 				FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */,
-				FA71A736204C76F9004FFBA1 /* GoogleService-Info.plist in Resources */,
+				FADB3F3A204C9B1D00DB59C8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,42 +191,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-smarttrip/Pods-smarttrip-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,14 +215,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-smarttrip/Pods-smarttrip-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseTwitterAuthUI.bundle,
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -269,9 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */,
-				FA0CD0601D92244A00D0680C /* Service.swift in Sources */,
-				FA0C439A1D88EA4600B36706 /* RegisterViewController.swift in Sources */,
-				FA0C439B1D88EA4600B36706 /* LoginVIewController.swift in Sources */,
 				FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

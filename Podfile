@@ -7,5 +7,6 @@ target 'smarttrip' do
 
   # Pods for smarttrip
   pod 'Firebase/Core'
-  pod 'FirebaseUI'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end
