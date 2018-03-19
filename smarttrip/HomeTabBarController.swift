@@ -9,26 +9,23 @@ import UIKit
 
 class HomeTabBarController: UITabBarController, UITabBarControllerDelegate {
     
-    let welcomeView = UIViewController()
+    let flowLayout = UICollectionViewFlowLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Trips"
-        setControllers()
+        setViewControllers()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: 0, action: nil)
     }
     
-    private func setControllers() {
-        let favoritesVC = UIViewController()
-        favoritesVC.title = "Trips"
-        favoritesVC.tabBarItem = UITabBarItem(title: "Trips", image: nil, tag: 0)
-        let downloadsVC = MapViewController()
-        downloadsVC.title = "Map"
-        downloadsVC.tabBarItem = UITabBarItem(title: "Map", image: nil, tag: 1)
+    private func setViewControllers() {
+        let tripsVC = TripsCollectionViewController(collectionViewLayout: flowLayout)
+        tripsVC.tabBarItem = UITabBarItem(title: "Trips", image: nil, tag: 0)
+        let mapsVC = MapViewController()
+        mapsVC.tabBarItem = UITabBarItem(title: "Map", image: nil, tag: 1)
+        let settingsVC = UIViewController()
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 2)
         
-        let historyVC = UIViewController()
-        historyVC.title = "Settings"
-        historyVC.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 2)
-        let controllers = [favoritesVC, downloadsVC, historyVC]
+        let controllers = [tripsVC, mapsVC, settingsVC]
         self.viewControllers = controllers
     }
 }

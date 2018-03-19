@@ -13,6 +13,7 @@
 		FABCE90E205F162C00588579 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCE90D205F162C00588579 /* HomeTabBarController.swift */; };
 		FABCE910205F1D3400588579 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABCE90F205F1D3400588579 /* Launch Screen.storyboard */; };
 		FABCE94C205FA9C200588579 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCE94B205FA9C200588579 /* MapViewController.swift */; };
+		FABCE94E205FB47300588579 /* TripsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCE94D205FB47300588579 /* TripsCollectionViewController.swift */; };
 		FADB3F3A204C9B1D00DB59C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */; };
 		FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		FABCE90D205F162C00588579 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		FABCE90F205F1D3400588579 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FABCE94B205FA9C200588579 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FABCE94D205FB47300588579 /* TripsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCollectionViewController.swift; sourceTree = "<group>"; };
 		FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAE432121D7467E400CA9DB1 /* smarttrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smarttrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE432151D7467E400CA9DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				FABCE90F205F1D3400588579 /* Launch Screen.storyboard */,
 				FABCE90D205F162C00588579 /* HomeTabBarController.swift */,
 				FABCE94B205FA9C200588579 /* MapViewController.swift */,
+				FABCE94D205FB47300588579 /* TripsCollectionViewController.swift */,
 			);
 			path = smarttrip;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */,
 				FABCE90E205F162C00588579 /* HomeTabBarController.swift in Sources */,
 				FABCE94C205FA9C200588579 /* MapViewController.swift in Sources */,
+				FABCE94E205FB47300588579 /* TripsCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
