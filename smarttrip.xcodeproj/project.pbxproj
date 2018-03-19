@@ -10,8 +10,10 @@
 		760589CB7EA8F710629A282B /* Pods_smarttrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350AA87388DD567B0E54C9F9 /* Pods_smarttrip.framework */; };
 		FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */; };
 		FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE432151D7467E400CA9DB1 /* AppDelegate.swift */; };
+		FABCE90E205F162C00588579 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCE90D205F162C00588579 /* HomeTabBarController.swift */; };
+		FABCE910205F1D3400588579 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABCE90F205F1D3400588579 /* Launch Screen.storyboard */; };
+		FABCE94C205FA9C200588579 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCE94B205FA9C200588579 /* MapViewController.swift */; };
 		FADB3F3A204C9B1D00DB59C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */; };
-		FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE432191D7467E400CA9DB1 /* Login.storyboard */; };
 		FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -19,12 +21,13 @@
 		350AA87388DD567B0E54C9F9 /* Pods_smarttrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smarttrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5D3FF26881FE5377DD6DFC /* Pods-smarttrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarttrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smarttrip/Pods-smarttrip.debug.xcconfig"; sourceTree = "<group>"; };
 		8EC7A4274B4CB6B6389B4717 /* Pods-smarttrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarttrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-smarttrip/Pods-smarttrip.release.xcconfig"; sourceTree = "<group>"; };
+		FABCE90D205F162C00588579 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		FABCE90F205F1D3400588579 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FABCE94B205FA9C200588579 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FADB3F3B204CA15A00DB59C8 /* smarttrip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = smarttrip.entitlements; sourceTree = "<group>"; };
 		FAE432121D7467E400CA9DB1 /* smarttrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smarttrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE432151D7467E400CA9DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		FAE4321A1D7467E400CA9DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE432211D7467E400CA9DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,13 +82,14 @@
 		FAE432141D7467E400CA9DB1 /* smarttrip */ = {
 			isa = PBXGroup;
 			children = (
-				FADB3F3B204CA15A00DB59C8 /* smarttrip.entitlements */,
-				FAE432191D7467E400CA9DB1 /* Login.storyboard */,
 				FAE432171D7467E400CA9DB1 /* WelcomeViewController.swift */,
 				FAE432151D7467E400CA9DB1 /* AppDelegate.swift */,
 				FAE4321C1D7467E400CA9DB1 /* Assets.xcassets */,
 				FAE432211D7467E400CA9DB1 /* Info.plist */,
 				FADB3F39204C9B1D00DB59C8 /* GoogleService-Info.plist */,
+				FABCE90F205F1D3400588579 /* Launch Screen.storyboard */,
+				FABCE90D205F162C00588579 /* HomeTabBarController.swift */,
+				FABCE94B205FA9C200588579 /* MapViewController.swift */,
 			);
 			path = smarttrip;
 			sourceTree = "<group>";
@@ -125,7 +129,7 @@
 				TargetAttributes = {
 					FAE432111D7467E400CA9DB1 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = PD5QMARB3X;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -157,8 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABCE910205F1D3400588579 /* Launch Screen.storyboard in Resources */,
 				FAE4321D1D7467E400CA9DB1 /* Assets.xcassets in Resources */,
-				FAE4321B1D7467E400CA9DB1 /* Login.storyboard in Resources */,
 				FADB3F3A204C9B1D00DB59C8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,21 +239,12 @@
 			files = (
 				FA0C43941D88EA4600B36706 /* WelcomeViewController.swift in Sources */,
 				FA0C439C1D88EA4600B36706 /* AppDelegate.swift in Sources */,
+				FABCE90E205F162C00588579 /* HomeTabBarController.swift in Sources */,
+				FABCE94C205FA9C200588579 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FAE432191D7467E400CA9DB1 /* Login.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAE4321A1D7467E400CA9DB1 /* Base */,
-			);
-			name = Login.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FAE432221D7467E400CA9DB1 /* Debug */ = {
@@ -359,12 +354,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = smarttrip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinharron.smarttripios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -376,12 +374,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = smarttrip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelvinharron.smarttripios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

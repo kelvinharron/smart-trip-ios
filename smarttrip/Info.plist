@@ -69,9 +69,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This application requires location services to work</string>
 	<key>UILaunchStoryboardName</key>
-	<string>Login</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Login</string>
+	<string>Launch Screen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
